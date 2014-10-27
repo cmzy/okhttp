@@ -319,7 +319,7 @@ public final class HttpEngine {
 
     if (!Internal.instance.isConnected(connection)) {
       Internal.instance.connect(connection, client.getConnectTimeout(), client.getReadTimeout(),
-          client.getWriteTimeout(), tunnelRequest(connection, request));
+          client.getWriteTimeout(), client.getSupportHttpSpdy(), tunnelRequest(connection, request));
       if (Internal.instance.isSpdy(connection)) {
         Internal.instance.share(client.getConnectionPool(), connection);
       }

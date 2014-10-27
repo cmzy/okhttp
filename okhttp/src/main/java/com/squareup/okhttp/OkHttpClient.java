@@ -80,8 +80,8 @@ public final class OkHttpClient implements Cloneable {
       }
 
       @Override public void connect(Connection connection, int connectTimeout, int readTimeout,
-          int writeTimeout, Request request) throws IOException {
-        connection.connect(connectTimeout, readTimeout, writeTimeout, request);
+          int writeTimeout, boolean support_http_spdy, Request request) throws IOException {
+        connection.connect(connectTimeout, readTimeout, writeTimeout, support_http_spdy, request);
       }
 
       @Override public boolean isConnected(Connection connection) {
@@ -150,6 +150,8 @@ public final class OkHttpClient implements Cloneable {
   private int connectTimeout;
   private int readTimeout;
   private int writeTimeout;
+
+  private boolean support_http_spdy = false;;
 
   public OkHttpClient() {
     routeDatabase = new RouteDatabase();
@@ -505,7 +507,15 @@ public final class OkHttpClient implements Cloneable {
     }
     return defaultSslSocketFactory;
   }
+  
+	public boolean getSupportHttpSpdy() {
+		// TODO Auto-generated method stub
+		return support_http_spdy;
+	}
 
+	public final void setSupportHttpSpdy(boolean status) {
+		support_http_spdy = status;
+	}
   /** Returns a shallow copy of this OkHttpClient. */
   @Override public OkHttpClient clone() {
     try {

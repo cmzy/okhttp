@@ -49,7 +49,7 @@ public abstract class Internal {
   public abstract void setOwner(Connection connection, HttpEngine httpEngine);
 
   public abstract void connect(Connection connection,
-      int connectTimeout, int readTimeout, int writeTimeout, Request request) throws IOException;
+      int connectTimeout, int readTimeout, int writeTimeout, boolean support_http_spdy, Request request) throws IOException;
 
   public abstract boolean isConnected(Connection connection);
 
