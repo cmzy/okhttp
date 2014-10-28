@@ -152,12 +152,10 @@ public final class Connection {
     } else {
         if (support_http_spdy) {
       	  protocol = Protocol.SPDY_3;
-      	  System.out.println("The protocol is spdy over http ");
       	  spdyConnection = new SpdyConnection.Builder(route.address.getUriHost(), true, socket)
       	  	.protocol(protocol).build();
       	  spdyConnection.sendConnectionPreface();
         } else {
-      	  System.out.println("The protocol is http");
       	  httpConnection = new HttpConnection(pool, this, socket);
         }
     }
@@ -202,7 +200,6 @@ public final class Connection {
     if (useNpn && (maybeProtocol = platform.getSelectedProtocol(sslSocket)) != null) {
       protocol = Protocol.get(maybeProtocol); // Throws IOE on unknown.
     }
-    System.out.println("The protocol is " + (protocol == Protocol.SPDY_3 ? "spdy" : "https" ) );
     if (protocol == Protocol.SPDY_3 || protocol == Protocol.HTTP_2) {
       sslSocket.setSoTimeout(0); // SPDY timeouts are set per-stream.
       spdyConnection = new SpdyConnection.Builder(route.address.getUriHost(), true, socket)

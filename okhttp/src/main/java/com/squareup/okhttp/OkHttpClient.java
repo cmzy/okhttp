@@ -509,7 +509,6 @@ public final class OkHttpClient implements Cloneable {
   }
   
 	public boolean getSupportHttpSpdy() {
-		// TODO Auto-generated method stub
 		return support_http_spdy;
 	}
 
