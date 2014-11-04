@@ -15,6 +15,7 @@
  */
 package com.squareup.okhttp;
 
+import com.squareup.okhttp.internal.Dns;
 import com.squareup.okhttp.internal.Internal;
 import com.squareup.okhttp.internal.InternalCache;
 import com.squareup.okhttp.internal.RouteDatabase;
@@ -23,6 +24,7 @@ import com.squareup.okhttp.internal.http.AuthenticatorAdapter;
 import com.squareup.okhttp.internal.http.HttpEngine;
 import com.squareup.okhttp.internal.http.Transport;
 import com.squareup.okhttp.internal.tls.OkHostnameVerifier;
+
 import java.io.IOException;
 import java.net.CookieHandler;
 import java.net.Proxy;
@@ -31,6 +33,7 @@ import java.net.URLConnection;
 import java.security.GeneralSecurityException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
 import javax.net.SocketFactory;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLContext;
@@ -157,6 +160,17 @@ public final class OkHttpClient implements Cloneable {
     routeDatabase = new RouteDatabase();
     dispatcher = new Dispatcher();
   }
+  
+    private Dns dns = Dns.DEFAULT;
+
+    public Dns getDns() {
+        return dns;
+    }
+
+    public OkHttpClient setDns(Dns dns) {
+        this.dns = dns;
+        return this;
+    }
 
   /**
    * Sets the default connect timeout for new connections. A value of 0 means no timeout.
