@@ -20,11 +20,11 @@ import com.squareup.okhttp.internal.Util;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.GzipSink;
-import okio.Okio;
+import Okio.Buffer;
+import Okio.BufferedSource;
+import Okio.ByteString;
+import Okio.GzipSink;
+import Okio.Okio;
 import org.junit.Test;
 
 import static com.squareup.okhttp.internal.Util.headerEntries;

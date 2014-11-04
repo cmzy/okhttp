@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import okio.Buffer;
+import Okio.Buffer;
 
 /** A scripted response to be replayed by the mock web server. */
 public final class MockResponse implements Cloneable {

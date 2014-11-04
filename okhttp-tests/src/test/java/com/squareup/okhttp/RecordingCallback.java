@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import okio.Buffer;
+import Okio.Buffer;
 
 /**
  * Records received HTTP responses so they can be later retrieved by tests.

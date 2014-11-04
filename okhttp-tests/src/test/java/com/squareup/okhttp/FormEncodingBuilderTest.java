@@ -15,7 +15,7 @@
  */
 package com.squareup.okhttp;
 
-import okio.Buffer;
+import Okio.Buffer;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

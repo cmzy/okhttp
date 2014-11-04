@@ -52,8 +52,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import okio.BufferedSink;
-import okio.Sink;
+import Okio.BufferedSink;
+import Okio.Sink;
 
 /**
  * This implementation uses HttpEngine to send requests and receive responses.

@@ -3,7 +3,7 @@ package com.squareup.okhttp.apache;
 import com.squareup.okhttp.MediaType;
 import com.squareup.okhttp.RequestBody;
 import java.io.IOException;
-import okio.BufferedSink;
+import Okio.BufferedSink;
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 

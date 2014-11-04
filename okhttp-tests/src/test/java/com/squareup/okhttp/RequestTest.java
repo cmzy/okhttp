@@ -19,7 +19,7 @@ import com.squareup.okhttp.internal.Util;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import okio.Buffer;
+import Okio.Buffer;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

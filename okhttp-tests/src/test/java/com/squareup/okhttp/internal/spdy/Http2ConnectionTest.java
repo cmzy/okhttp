@@ -21,11 +21,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.Okio;
-import okio.Source;
+import Okio.Buffer;
+import Okio.BufferedSink;
+import Okio.BufferedSource;
+import Okio.Okio;
+import Okio.Source;
 import org.junit.After;
 import org.junit.Test;
 

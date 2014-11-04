@@ -16,8 +16,8 @@ import java.security.SecureRandom;
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
-import okio.Buffer;
-import okio.Okio;
+import Okio.Buffer;
+import Okio.Okio;
 
 public class SampleServer extends Dispatcher {
   private final SSLContext sslContext;

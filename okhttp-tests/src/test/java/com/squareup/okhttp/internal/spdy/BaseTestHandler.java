@@ -17,8 +17,8 @@ package com.squareup.okhttp.internal.spdy;
 
 import java.io.IOException;
 import java.util.List;
-import okio.BufferedSource;
-import okio.ByteString;
+import Okio.BufferedSource;
+import Okio.ByteString;
 
 import static org.junit.Assert.fail;
 

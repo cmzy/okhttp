@@ -42,8 +42,8 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSocketFactory;
-import okio.BufferedSource;
-import okio.Okio;
+import Okio.BufferedSource;
+import Okio.Okio;
 
 /**
  * Helper methods that convert between Java and OkHttp representations.

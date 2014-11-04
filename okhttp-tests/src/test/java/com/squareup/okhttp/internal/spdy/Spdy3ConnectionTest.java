@@ -23,12 +23,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.ByteString;
-import okio.Okio;
-import okio.Sink;
-import okio.Source;
+import Okio.Buffer;
+import Okio.BufferedSink;
+import Okio.ByteString;
+import Okio.Okio;
+import Okio.Sink;
+import Okio.Source;
 import org.junit.After;
 import org.junit.Test;
 

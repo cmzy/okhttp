@@ -15,7 +15,7 @@
  */
 package com.squareup.okhttp;
 
-import okio.Buffer;
+import Okio.Buffer;
 import org.junit.Test;
 
 import static com.squareup.okhttp.internal.Util.UTF_8;

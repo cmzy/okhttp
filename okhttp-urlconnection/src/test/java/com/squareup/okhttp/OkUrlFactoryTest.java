@@ -17,8 +17,8 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
 import static java.nio.charset.StandardCharsets.US_ASCII;
-import static okio.Okio.buffer;
-import static okio.Okio.source;
+import static Okio.Okio.buffer;
+import static Okio.Okio.source;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 

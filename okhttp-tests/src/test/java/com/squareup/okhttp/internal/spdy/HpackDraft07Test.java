@@ -18,13 +18,13 @@ package com.squareup.okhttp.internal.spdy;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import okio.Buffer;
-import okio.ByteString;
+import Okio.Buffer;
+import Okio.ByteString;
 import org.junit.Before;
 import org.junit.Test;
 
 import static com.squareup.okhttp.internal.Util.headerEntries;
-import static okio.ByteString.decodeHex;
+import static Okio.ByteString.decodeHex;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
