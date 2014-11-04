@@ -19,9 +19,9 @@ import com.squareup.okhttp.internal.Util;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import okio.BufferedSink;
-import okio.Okio;
-import okio.Source;
+import Okio.BufferedSink;
+import Okio.Okio;
+import Okio.Source;
 
 public abstract class RequestBody {
   /** Returns the Content-Type header for this body. */

@@ -40,11 +40,11 @@ import java.security.cert.CertificateFactory;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.ForwardingSource;
-import okio.Okio;
-import okio.Source;
+import Okio.BufferedSource;
+import Okio.ByteString;
+import Okio.ForwardingSource;
+import Okio.Okio;
+import Okio.Source;
 
 import static com.squareup.okhttp.internal.Util.UTF_8;
 

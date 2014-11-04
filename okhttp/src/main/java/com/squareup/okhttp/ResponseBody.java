@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
-import okio.BufferedSource;
+import Okio.BufferedSource;
 
 import static com.squareup.okhttp.internal.Util.UTF_8;
 

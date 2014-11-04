@@ -34,9 +34,9 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadFactory;
-import okio.Buffer;
-import okio.ByteString;
-import okio.Source;
+import Okio.Buffer;
+import Okio.ByteString;
+import Okio.Source;
 
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
 

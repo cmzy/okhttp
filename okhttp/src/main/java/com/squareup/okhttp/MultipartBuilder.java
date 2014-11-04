@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-import okio.BufferedSink;
+import Okio.BufferedSink;
 
 /**
  * Fluent API to build <a href="http://www.ietf.org/rfc/rfc2387.txt">RFC

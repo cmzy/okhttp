@@ -23,8 +23,8 @@ import com.squareup.okhttp.internal.http.OkHeaders;
 import com.squareup.okhttp.internal.http.RetryableSink;
 import java.io.IOException;
 import java.net.ProtocolException;
-import okio.BufferedSink;
-import okio.BufferedSource;
+import Okio.BufferedSink;
+import Okio.BufferedSource;
 
 import static com.squareup.okhttp.internal.http.HttpEngine.MAX_REDIRECTS;
 

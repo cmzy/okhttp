@@ -35,11 +35,11 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-import okio.Buffer;
-import okio.ByteString;
-import okio.Sink;
-import okio.Source;
-import okio.Timeout;
+import Okio.Buffer;
+import Okio.ByteString;
+import Okio.Sink;
+import Okio.Source;
+import Okio.Timeout;
 
 import static com.squareup.okhttp.internal.spdy.Header.RESPONSE_STATUS;
 import static com.squareup.okhttp.internal.spdy.Header.TARGET_AUTHORITY;

@@ -34,10 +34,10 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Okio;
+import Okio.Buffer;
+import Okio.BufferedSource;
+import Okio.ByteString;
+import Okio.Okio;
 
 import static com.squareup.okhttp.internal.spdy.Settings.DEFAULT_INITIAL_WINDOW_SIZE;
 

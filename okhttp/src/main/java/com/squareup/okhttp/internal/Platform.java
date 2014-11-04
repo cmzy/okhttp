@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.net.ssl.SSLSocket;
-import okio.Buffer;
+import Okio.Buffer;
 
 /**
  * Access to Platform-specific features necessary for SPDY and advanced TLS.

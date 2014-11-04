@@ -18,10 +18,10 @@ package com.squareup.okhttp.internal.http;
 
 import java.io.IOException;
 import java.net.ProtocolException;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.Sink;
-import okio.Timeout;
+import Okio.Buffer;
+import Okio.BufferedSink;
+import Okio.Sink;
+import Okio.Timeout;
 
 import static com.squareup.okhttp.internal.Util.checkOffsetAndCount;
 

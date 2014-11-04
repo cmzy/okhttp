@@ -22,12 +22,12 @@ import java.io.UnsupportedEncodingException;
 import java.net.ProtocolException;
 import java.util.List;
 import java.util.zip.Deflater;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.DeflaterSink;
-import okio.Okio;
+import Okio.Buffer;
+import Okio.BufferedSink;
+import Okio.BufferedSource;
+import Okio.ByteString;
+import Okio.DeflaterSink;
+import Okio.Okio;
 
 /**
  * Read and write spdy/3.1 frames.

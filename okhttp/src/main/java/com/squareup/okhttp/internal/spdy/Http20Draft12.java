@@ -19,17 +19,17 @@ import com.squareup.okhttp.Protocol;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Source;
-import okio.Timeout;
+import Okio.Buffer;
+import Okio.BufferedSink;
+import Okio.BufferedSource;
+import Okio.ByteString;
+import Okio.Source;
+import Okio.Timeout;
 
 import static com.squareup.okhttp.internal.spdy.Http20Draft12.FrameLogger.formatHeader;
 import static java.lang.String.format;
 import static java.util.logging.Level.FINE;
-import static okio.ByteString.EMPTY;
+import static Okio.ByteString.EMPTY;
 
 /**
  * Read and write HTTP/2 v12 frames.

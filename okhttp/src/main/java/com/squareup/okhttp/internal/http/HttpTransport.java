@@ -20,8 +20,8 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 import java.io.IOException;
 import java.net.CacheRequest;
-import okio.Sink;
-import okio.Source;
+import Okio.Sink;
+import Okio.Source;
 
 public final class HttpTransport implements Transport {
   private final HttpEngine httpEngine;

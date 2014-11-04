@@ -34,10 +34,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.Okio;
+import Okio.Buffer;
+import Okio.BufferedSink;
+import Okio.BufferedSource;
+import Okio.Okio;
 
 /**
  * A cache that uses a bounded amount of space on a filesystem. Each cache
