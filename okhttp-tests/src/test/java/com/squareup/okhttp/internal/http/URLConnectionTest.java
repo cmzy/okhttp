@@ -16,10 +16,9 @@
 
 package com.squareup.okhttp.internal.http;
 
-import com.squareup.okhttp.AbstractResponseCache;
 import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.Challenge;
-import com.squareup.okhttp.ConnectionConfiguration;
+import com.squareup.okhttp.ConnectionSpec;
 import com.squareup.okhttp.ConnectionPool;
 import com.squareup.okhttp.Credentials;
 import com.squareup.okhttp.OkHttpClient;
@@ -33,7 +32,6 @@ import com.squareup.okhttp.internal.RecordingOkAuthenticator;
 import com.squareup.okhttp.internal.SingleInetAddressNetwork;
 import com.squareup.okhttp.internal.SslContextBuilder;
 import com.squareup.okhttp.internal.Util;
-import com.squareup.okhttp.internal.huc.CacheAdapter;
 import com.squareup.okhttp.mockwebserver.MockResponse;
 import com.squareup.okhttp.mockwebserver.MockWebServer;
 import com.squareup.okhttp.mockwebserver.RecordedRequest;
@@ -43,7 +41,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Authenticator;
-import java.net.CacheRequest;
 import java.net.ConnectException;
 import java.net.HttpRetryException;
 import java.net.HttpURLConnection;
@@ -70,7 +67,6 @@ import java.util.Random;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.zip.GZIPInputStream;
 import javax.net.SocketFactory;
 import javax.net.ssl.HttpsURLConnection;
@@ -116,10 +112,8 @@ public final class URLConnectionTest {
   private final OkUrlFactory client = new OkUrlFactory(new OkHttpClient());
   private HttpURLConnection connection;
   private Cache cache;
-  private String hostName;
 
   @Before public void setUp() throws Exception {
-    hostName = server.getHostName();
     server.setProtocolNegotiationEnabled(false);
   }
 
@@ -861,8 +855,7 @@ public final class URLConnectionTest {
     // Configure a single IP address for the host and a single configuration, so we only need one
     // failure to fail permanently.
     Internal.instance.setNetwork(client.client(), new SingleInetAddressNetwork());
-    client.client().setConnectionConfigurations(
-        Util.immutableList(ConnectionConfiguration.MODERN_TLS));
+    client.client().setConnectionSpecs(Util.immutableList(ConnectionSpec.MODERN_TLS));
     server.enqueue(response);
     server.play();
     client.client().setProxy(server.toProxyAddress());
@@ -1896,8 +1889,8 @@ public final class URLConnectionTest {
     assertContent("This is the first server again!", client.open(server.getUrl("/")));
     assertContent("This is the 2nd server, again!", client.open(server2.getUrl("/")));
 
-    String server1Host = hostName + ":" + server.getPort();
-    String server2Host = hostName + ":" + server2.getPort();
+    String server1Host = server.getHostName() + ":" + server.getPort();
+    String server2Host = server2.getHostName() + ":" + server2.getPort();
     assertContains(server.takeRequest().getHeaders(), "Host: " + server1Host);
     assertContains(server2.takeRequest().getHeaders(), "Host: " + server2Host);
     assertEquals("Expected connection reuse", 1, server.takeRequest().getSequenceNumber());
@@ -2004,8 +1997,7 @@ public final class URLConnectionTest {
   }
 
   @Test public void redirectedPostStripsRequestBodyHeaders() throws Exception {
-    server.enqueue(new MockResponse()
-        .setResponseCode(HttpURLConnection.HTTP_MOVED_TEMP)
+    server.enqueue(new MockResponse().setResponseCode(HttpURLConnection.HTTP_MOVED_TEMP)
         .addHeader("Location: /page2"));
     server.enqueue(new MockResponse().setBody("Page 2"));
     server.play();
@@ -2178,8 +2170,10 @@ public final class URLConnectionTest {
     assertContent("DEF", client.open(url));
     assertContent("GHI", client.open(url));
 
-    assertEquals(Arrays.asList("verify " + hostName), hostnameVerifier.calls);
-    assertEquals(Arrays.asList("checkServerTrusted [CN=" + hostName + " 1]"), trustManager.calls);
+    assertEquals(Arrays.asList("verify " + server.getHostName()),
+        hostnameVerifier.calls);
+    assertEquals(Arrays.asList("checkServerTrusted [CN=" + server.getHostName() + " 1]"),
+        trustManager.calls);
   }
 
   @Test public void readTimeouts() throws IOException {
@@ -2208,7 +2202,7 @@ public final class URLConnectionTest {
   /** Confirm that an unacknowledged write times out. */
   @Test public void writeTimeouts() throws IOException {
     server.enqueue(new MockResponse()
-        .throttleBody(1, 3600, TimeUnit.SECONDS)); // Prevent the server from reading!
+        .throttleBody(1, 1, TimeUnit.SECONDS)); // Prevent the server from reading!
     server.play();
 
     client.client().setWriteTimeout(500, TimeUnit.MILLISECONDS);
@@ -2370,12 +2364,7 @@ public final class URLConnectionTest {
   }
 
   @Test public void getHeadersThrows() throws IOException {
-    // Enqueue a response for every IP address held by localhost, because the route selector
-    // will try each in sequence.
-    // TODO: use the fake Dns implementation instead of a loop
-    for (InetAddress inetAddress : InetAddress.getAllByName(server.getHostName())) {
-      server.enqueue(new MockResponse().setSocketPolicy(DISCONNECT_AT_START));
-    }
+    server.enqueue(new MockResponse().setSocketPolicy(DISCONNECT_AT_START));
     server.play();
 
     connection = client.open(server.getUrl("/"));
@@ -2428,33 +2417,6 @@ public final class URLConnectionTest {
       fail();
     } catch (ConnectException expected) {
     }
-  }
-
-  /** Don't explode if the cache returns a null body. http://b/3373699 */
-  @Test public void responseCacheReturnsNullOutputStream() throws Exception {
-    final AtomicBoolean aborted = new AtomicBoolean();
-    Internal.instance.setCache(client.client(), new CacheAdapter(new AbstractResponseCache() {
-      @Override public CacheRequest put(URI uri, URLConnection connection) throws IOException {
-        return new CacheRequest() {
-          @Override public void abort() {
-            aborted.set(true);
-          }
-
-          @Override public OutputStream getBody() throws IOException {
-            return null;
-          }
-        };
-      }
-    }));
-
-    server.enqueue(new MockResponse().setBody("abcdef"));
-    server.play();
-
-    HttpURLConnection connection = client.open(server.getUrl("/"));
-    InputStream in = connection.getInputStream();
-    assertEquals("abc", readAscii(in, 3));
-    in.close();
-    assertFalse(aborted.get()); // The best behavior is ambiguous, but RI 6 doesn't abort here
   }
 
   /** http://code.google.com/p/android/issues/detail?id=14562 */
@@ -3215,7 +3177,7 @@ public final class URLConnectionTest {
       @Override public HttpURLConnection connect(
           MockWebServer server, OkUrlFactory streamHandlerFactory, URL url)
           throws IOException {
-        System.setProperty("proxyHost", "localhost");
+        System.setProperty("proxyHost", server.getHostName());
         System.setProperty("proxyPort", Integer.toString(server.getPort()));
         return streamHandlerFactory.open(url);
       }
@@ -3225,7 +3187,7 @@ public final class URLConnectionTest {
       @Override public HttpURLConnection connect(
           MockWebServer server, OkUrlFactory streamHandlerFactory, URL url)
           throws IOException {
-        System.setProperty("http.proxyHost", "localhost");
+        System.setProperty("http.proxyHost", server.getHostName());
         System.setProperty("http.proxyPort", Integer.toString(server.getPort()));
         return streamHandlerFactory.open(url);
       }
@@ -3235,7 +3197,7 @@ public final class URLConnectionTest {
       @Override public HttpURLConnection connect(
           MockWebServer server, OkUrlFactory streamHandlerFactory, URL url)
           throws IOException {
-        System.setProperty("https.proxyHost", "localhost");
+        System.setProperty("https.proxyHost", server.getHostName());
         System.setProperty("https.proxyPort", Integer.toString(server.getPort()));
         return streamHandlerFactory.open(url);
       }

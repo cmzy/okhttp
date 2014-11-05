@@ -644,8 +644,7 @@ public final class CallTest {
   }
 
   @Test public void noRecoveryFromTlsHandshakeFailureWhenTlsFallbackIsDisabled() throws Exception {
-    client.setConnectionConfigurations(Arrays.asList(
-        ConnectionConfiguration.MODERN_TLS, ConnectionConfiguration.CLEARTEXT));
+    client.setConnectionSpecs(Arrays.asList(ConnectionSpec.MODERN_TLS, ConnectionSpec.CLEARTEXT));
 
     server.useHttps(sslContext.getSocketFactory(), false);
     server.enqueue(new MockResponse().setSocketPolicy(SocketPolicy.FAIL_HANDSHAKE));
@@ -665,8 +664,8 @@ public final class CallTest {
 
   @Test public void cleartextCallsFailWhenCleartextIsDisabled() throws Exception {
     // Configure the client with only TLS configurations. No cleartext!
-    client.setConnectionConfigurations(Arrays.asList(
-        ConnectionConfiguration.MODERN_TLS, ConnectionConfiguration.COMPATIBLE_TLS));
+    client.setConnectionSpecs(Arrays.asList(
+        ConnectionSpec.MODERN_TLS, ConnectionSpec.COMPATIBLE_TLS));
 
     server.enqueue(new MockResponse());
     server.play();
@@ -676,7 +675,7 @@ public final class CallTest {
       client.newCall(request).execute();
       fail();
     } catch (SocketException expected) {
-      assertTrue(expected.getMessage().contains("exhausted connection configurations"));
+      assertTrue(expected.getMessage().contains("exhausted connection specs"));
     }
   }
 
@@ -1105,8 +1104,10 @@ public final class CallTest {
     server2.enqueue(new MockResponse().setBody("Page 2"));
     server2.play();
 
-    server.enqueue(new MockResponse().setResponseCode(401));
-    server.enqueue(new MockResponse().setResponseCode(302)
+    server.enqueue(new MockResponse()
+        .setResponseCode(401));
+    server.enqueue(new MockResponse()
+        .setResponseCode(302)
         .addHeader("Location: " + server2.getUrl("/b")));
     server.play();
 
@@ -1228,6 +1229,18 @@ public final class CallTest {
     } catch (IOException e){
     }
     assertEquals(0, server.getRequestCount());
+  }
+
+  @Test public void cancelTagImmediatelyAfterEnqueue() throws Exception {
+    server.play();
+    Call call = client.newCall(new Request.Builder()
+        .url(server.getUrl("/a"))
+        .tag("request")
+        .build());
+    call.enqueue(callback);
+    client.cancel("request");
+    assertEquals(0, server.getRequestCount());
+    callback.await(server.getUrl("/a")).assertFailure("Canceled");
   }
 
   @Test public void cancelBeforeBodyIsRead() throws Exception {
@@ -1471,7 +1484,7 @@ public final class CallTest {
 
     RecordedRequest recordedRequest = server.takeRequest();
     assertTrue(recordedRequest.getHeader("User-Agent")
-        .matches("okhttp/\\d\\.\\d\\.\\d(-SNAPSHOT)?"));
+        .matches("okhttp/\\d\\.\\d\\.\\d(-SNAPSHOT|-RC\\d+)?"));
   }
 
   @Test public void setFollowRedirectsFalse() throws Exception {

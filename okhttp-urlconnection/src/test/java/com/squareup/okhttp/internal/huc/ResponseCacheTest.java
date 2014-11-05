@@ -55,6 +55,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
@@ -78,12 +80,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-/**
- * Tests for interaction between OkHttp and the ResponseCache. This test is
- * based on {@link com.squareup.okhttp.CacheTest}. Some tests for the {@link
- * com.squareup.okhttp.internal.InternalCache} in CacheTest cover ResponseCache
- * as well.
- */
+/** Tests the interaction between OkHttp and {@link ResponseCache}. */
 public final class ResponseCacheTest {
   private static final HostnameVerifier NULL_HOSTNAME_VERIFIER = new HostnameVerifier() {
     @Override public boolean verify(String s, SSLSession sslSession) {
@@ -570,10 +567,9 @@ public final class ResponseCacheTest {
   }
 
   /**
-   * Equivalent to {@link com.squareup.okhttp.CacheTest#postInvalidatesCacheWithUncacheableResponse()} but
-   * demonstrating that {@link ResponseCache} provides no mechanism for cache invalidation as the
-   * result of locally-made requests. In reality invalidation could take place from other clients at
-   * any time.
+   * Equivalent to {@code CacheTest.postInvalidatesCacheWithUncacheableResponse()} but demonstrating
+   * that {@link ResponseCache} provides no mechanism for cache invalidation as the result of
+   * locally-made requests. In reality invalidation could take place from other clients at any time.
    */
   @Test public void postInvalidatesCacheWithUncacheableResponse() throws Exception {
     // 1. seed the cache
@@ -921,36 +917,8 @@ public final class ResponseCacheTest {
     assertEquals("", readAscii(connection));
   }
 
-  @Test public void authorizationRequestHeaderPreventsCaching() throws Exception {
-    server.enqueue(
-        new MockResponse().addHeader("Last-Modified: " + formatDate(-2, TimeUnit.MINUTES))
-            .addHeader("Cache-Control: max-age=60")
-            .setBody("A"));
-    server.enqueue(new MockResponse().setBody("B"));
-
-    URL url = server.getUrl("/");
-    URLConnection connection = openConnection(url);
-    connection.addRequestProperty("Authorization", "password");
-    assertEquals("A", readAscii(connection));
-    assertEquals("B", readAscii(openConnection(url)));
-  }
-
-  @Test public void authorizationResponseCachedWithSMaxAge() throws Exception {
-    assertAuthorizationRequestFullyCached(
-        new MockResponse().addHeader("Cache-Control: s-maxage=60"));
-  }
-
-  @Test public void authorizationResponseCachedWithPublic() throws Exception {
-    assertAuthorizationRequestFullyCached(new MockResponse().addHeader("Cache-Control: public"));
-  }
-
-  @Test public void authorizationResponseCachedWithMustRevalidate() throws Exception {
-    assertAuthorizationRequestFullyCached(
-        new MockResponse().addHeader("Cache-Control: must-revalidate"));
-  }
-
-  public void assertAuthorizationRequestFullyCached(MockResponse response) throws Exception {
-    server.enqueue(response.addHeader("Cache-Control: max-age=60").setBody("A"));
+  @Test public void authorizationRequestFullyCached() throws Exception {
+    server.enqueue(new MockResponse().addHeader("Cache-Control: max-age=60").setBody("A"));
     server.enqueue(new MockResponse().setBody("B"));
 
     URL url = server.getUrl("/");
@@ -1159,9 +1127,8 @@ public final class ResponseCacheTest {
   }
 
   /**
-   * Equivalent to {@link com.squareup.okhttp.CacheTest#conditionalHitUpdatesCache()}, except a Java
-   * standard cache has no means to update the headers for an existing entry so the behavior is
-   * different.
+   * Equivalent to {@code CacheTest.conditionalHitUpdatesCache()}, except a Java standard cache has
+   * no means to update the headers for an existing entry so the behavior is different.
    */
   @Test public void conditionalHitDoesNotUpdateCache() throws Exception {
     // A response that is cacheable, but with a short life.
@@ -1254,6 +1221,69 @@ public final class ResponseCacheTest {
   }
 
   /**
+   * Test that we can interrogate the response when the cache is being
+   * populated. http://code.google.com/p/android/issues/detail?id=7787
+   */
+  @Test public void responseCacheCallbackApis() throws Exception {
+    final String body = "ABCDE";
+    final AtomicInteger cacheCount = new AtomicInteger();
+
+    server.enqueue(new MockResponse()
+        .setStatus("HTTP/1.1 200 Fantastic")
+        .addHeader("Content-Type: text/plain")
+        .addHeader("fgh: ijk")
+        .setBody(body));
+
+    Internal.instance.setCache(client, new CacheAdapter(new AbstractResponseCache() {
+      @Override public CacheRequest put(URI uri, URLConnection connection) throws IOException {
+        HttpURLConnection httpURLConnection = (HttpURLConnection) connection;
+        assertEquals(server.getUrl("/"), uri.toURL());
+        assertEquals(200, httpURLConnection.getResponseCode());
+        try {
+          httpURLConnection.getInputStream();
+          fail();
+        } catch (UnsupportedOperationException expected) {
+        }
+        assertEquals("5", connection.getHeaderField("Content-Length"));
+        assertEquals("text/plain", connection.getHeaderField("Content-Type"));
+        assertEquals("ijk", connection.getHeaderField("fgh"));
+        cacheCount.incrementAndGet();
+        return null;
+      }
+    }));
+
+    URL url = server.getUrl("/");
+    HttpURLConnection connection = openConnection(url);
+    assertEquals(body, readAscii(connection));
+    assertEquals(1, cacheCount.get());
+  }
+
+  /** Don't explode if the cache returns a null body. http://b/3373699 */
+  @Test public void responseCacheReturnsNullOutputStream() throws Exception {
+    final AtomicBoolean aborted = new AtomicBoolean();
+    Internal.instance.setCache(client, new CacheAdapter(new AbstractResponseCache() {
+      @Override public CacheRequest put(URI uri, URLConnection connection) {
+        return new CacheRequest() {
+          @Override public void abort() {
+            aborted.set(true);
+          }
+
+          @Override public OutputStream getBody() throws IOException {
+            return null;
+          }
+        };
+      }
+    }));
+
+    server.enqueue(new MockResponse().setBody("abcdef"));
+
+    HttpURLConnection connection = openConnection(server.getUrl("/"));
+    assertEquals("abc", readAscii(connection, 3));
+    connection.getInputStream().close();
+    assertFalse(aborted.get()); // The best behavior is ambiguous, but RI 6 doesn't abort here
+  }
+
+  /**
    * @param delta the offset from the current date to use. Negative
    * values yield dates in the past; positive values yield dates in the
    * future.
@@ -1331,7 +1361,7 @@ public final class ResponseCacheTest {
    */
   private MockResponse truncateViolently(MockResponse response, int numBytesToKeep) {
     response.setSocketPolicy(DISCONNECT_AT_END);
-    List<String> headers = new ArrayList<String>(response.getHeaders());
+    List<String> headers = new ArrayList<>(response.getHeaders());
     Buffer truncatedBody = new Buffer();
     truncatedBody.write(response.getBody(), numBytesToKeep);
     response.setBody(truncatedBody);
