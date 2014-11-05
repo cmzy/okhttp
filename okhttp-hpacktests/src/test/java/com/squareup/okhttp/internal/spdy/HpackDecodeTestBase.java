@@ -20,6 +20,7 @@ import com.squareup.okhttp.internal.spdy.hpackjson.HpackJsonUtil;
 import com.squareup.okhttp.internal.spdy.hpackjson.Story;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import okio.Buffer;
@@ -42,6 +43,7 @@ public class HpackDecodeTestBase {
       List<Story> stories = HpackJsonUtil.readStories(interopTestName);
       if (stories.isEmpty()) {
         fail("No stories for: " + interopTestName);
+        continue; // Don't explode if hpacktests aren't available.
       }
       for (Story story : stories) {
         result.add(new Story[] { story });
