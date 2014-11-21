@@ -21,7 +21,6 @@
   <modules>
     <module>okhttp</module>
     <module>okhttp-apache</module>
-    <module>okhttp-hpacktests</module>
     <module>okhttp-tests</module>
     <module>okhttp-urlconnection</module>
     <module>okcurl</module>
@@ -178,6 +177,7 @@
           <failsOnError>true</failsOnError>
           <configLocation>checkstyle.xml</configLocation>
           <consoleOutput>true</consoleOutput>
+          <excludes>**/CipherSuite.java</excludes>
         </configuration>
         <executions>
           <execution>
