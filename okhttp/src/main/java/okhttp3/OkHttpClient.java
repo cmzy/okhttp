@@ -130,7 +130,41 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
   static final List<ConnectionSpec> DEFAULT_CONNECTION_SPECS = Util.immutableList(
       ConnectionSpec.MODERN_TLS, ConnectionSpec.CLEARTEXT);
 
-  static {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    private static final List<Interceptor> sDefaultInterceptors = new ArrayList<>();
+
+    public static boolean addDefaultInterceptor(Interceptor interceptor) {
+        return sDefaultInterceptors.add(interceptor);
+    }
+
+    public static boolean removeDefaultInterceptor(Interceptor interceptor) {
+        return sDefaultInterceptors.remove(interceptor);
+    }
+
+    public static List<Interceptor> getDefaultInterceptors() {
+        return sDefaultInterceptors;
+    }
+
+    ////
+
+    private static final List<Interceptor> sDefaultNetworkInterceptors = new ArrayList<>();
+
+    public static void addDefaultNetworkInterceptor(Interceptor interceptor) {
+        sDefaultNetworkInterceptors.add(interceptor);
+    }
+
+    public static boolean removeDefaultNetworkInterceptor(Interceptor interceptor) {
+        return sDefaultNetworkInterceptors.remove(interceptor);
+    }
+
+    public static List<Interceptor> getDefaultNetworkInterceptors() {
+        return sDefaultNetworkInterceptors;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    static {
     Internal.instance = new Internal() {
       @Override public void addLenient(Headers.Builder builder, String line) {
         builder.addLenient(line);
