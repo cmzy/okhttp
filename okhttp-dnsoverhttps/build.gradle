@@ -1,6 +1,6 @@
 jar {
   manifest {
-    attributes('Automatic-Module-Name': 'okhttp3.dnsoverhttps')
+    attributes('Automatic-Module-Name': 'mOkhttp3.dnsoverhttps')
   }
 }
 

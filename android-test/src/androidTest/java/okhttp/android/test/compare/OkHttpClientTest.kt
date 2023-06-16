@@ -16,9 +16,9 @@
 package okhttp.android.test.compare;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import okhttp3.OkHttpClient
-import okhttp3.Protocol
-import okhttp3.Request
+import mOkhttp3.OkHttpClient
+import mOkhttp3.Protocol
+import mOkhttp3.Request
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import org.junit.runner.RunWith

@@ -146,7 +146,7 @@ subprojects { project ->
   animalsniffer {
     // https://github.com/mojohaus/animal-sniffer/issues/70
     excludeJars "android-all-*"
-    annotation "okhttp3.internal.SuppressSignatureCheck"
+    annotation "mOkhttp3.internal.SuppressSignatureCheck"
     sourceSets = [sourceSets.main]
   }
   dependencies {
@@ -211,7 +211,7 @@ subprojects { project ->
       skipDeprecated = true
       jdkVersion = 8
       perPackageOption {
-        prefix = "okhttp3.internal"
+        prefix = "mOkhttp3.internal"
         suppress = true
       }
       if (project.file('Module.md').exists()) {

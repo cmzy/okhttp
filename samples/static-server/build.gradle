@@ -6,7 +6,7 @@ tasks.withType(JavaCompile) {
 
 jar {
   manifest {
-    attributes 'Main-Class': 'okhttp3.sample.SampleServer'
+    attributes 'Main-Class': 'mOkhttp3.sample.SampleServer'
   }
 }
 

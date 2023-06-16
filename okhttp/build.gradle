@@ -2,7 +2,7 @@ apply plugin: 'me.champeau.gradle.japicmp'
 
 jar {
   manifest {
-    attributes('Automatic-Module-Name': 'okhttp3')
+    attributes('Automatic-Module-Name': 'mOkhttp3')
   }
 }
 
@@ -55,61 +55,61 @@ task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   oldClasspath = files(baselineJar(project, baselineVersion))
   newClasspath = files(jar.archivePath)
   onlyBinaryIncompatibleModified = true
-  failOnModification = true
+  failOnModification = false
   txtOutputFile = file("$buildDir/reports/japi.txt")
   ignoreMissingClasses = true
   includeSynthetic = true
   packageExcludes = [
-      'okhttp3.internal',
-      'okhttp3.internal.annotations',
-      'okhttp3.internal.cache',
-      'okhttp3.internal.cache2',
-      'okhttp3.internal.connection',
-      'okhttp3.internal.http',
-      'okhttp3.internal.http1',
-      'okhttp3.internal.http2',
-      'okhttp3.internal.io',
-      'okhttp3.internal.platform',
-      'okhttp3.internal.proxy',
-      'okhttp3.internal.publicsuffix',
-      'okhttp3.internal.tls',
-      'okhttp3.internal.ws',
+      'mOkhttp3.internal',
+      'mOkhttp3.internal.annotations',
+      'mOkhttp3.internal.cache',
+      'mOkhttp3.internal.cache2',
+      'mOkhttp3.internal.connection',
+      'mOkhttp3.internal.http',
+      'mOkhttp3.internal.http1',
+      'mOkhttp3.internal.http2',
+      'mOkhttp3.internal.io',
+      'mOkhttp3.internal.platform',
+      'mOkhttp3.internal.proxy',
+      'mOkhttp3.internal.publicsuffix',
+      'mOkhttp3.internal.tls',
+      'mOkhttp3.internal.ws',
   ]
   classExcludes = [
       // Package-private in 3.x, internal in 4.0.0:
-      'okhttp3.Cache$CacheResponseBody$1',
-      'okhttp3.RealCall$AsyncCall',
+      'mOkhttp3.Cache$CacheResponseBody$1',
+      'mOkhttp3.RealCall$AsyncCall',
   ]
   methodExcludes = [
       // Became 'final' despite a non-final enclosing class in 4.0.0:
-      'okhttp3.OkHttpClient#authenticator()',
-      'okhttp3.OkHttpClient#cache()',
-      'okhttp3.OkHttpClient#callTimeoutMillis()',
-      'okhttp3.OkHttpClient#certificatePinner()',
-      'okhttp3.OkHttpClient#connectionPool()',
-      'okhttp3.OkHttpClient#connectionSpecs()',
-      'okhttp3.OkHttpClient#connectTimeoutMillis()',
-      'okhttp3.OkHttpClient#cookieJar()',
-      'okhttp3.OkHttpClient#dispatcher()',
-      'okhttp3.OkHttpClient#dns()',
-      'okhttp3.OkHttpClient#eventListenerFactory()',
-      'okhttp3.OkHttpClient#followRedirects()',
-      'okhttp3.OkHttpClient#followSslRedirects()',
-      'okhttp3.OkHttpClient#hostnameVerifier()',
-      'okhttp3.OkHttpClient#interceptors()',
-      'okhttp3.OkHttpClient#networkInterceptors()',
-      'okhttp3.OkHttpClient#pingIntervalMillis()',
-      'okhttp3.OkHttpClient#protocols()',
-      'okhttp3.OkHttpClient#proxy()',
-      'okhttp3.OkHttpClient#proxyAuthenticator()',
-      'okhttp3.OkHttpClient#proxySelector()',
-      'okhttp3.OkHttpClient#readTimeoutMillis()',
-      'okhttp3.OkHttpClient#retryOnConnectionFailure()',
-      'okhttp3.OkHttpClient#socketFactory()',
-      'okhttp3.OkHttpClient#sslSocketFactory()',
-      'okhttp3.OkHttpClient#writeTimeoutMillis()',
-      'okhttp3.OkHttpClient#writeTimeoutMillis()',
-      'okhttp3.Request$Builder#delete()',
+      'mOkhttp3.OkHttpClient#authenticator()',
+      'mOkhttp3.OkHttpClient#cache()',
+      'mOkhttp3.OkHttpClient#callTimeoutMillis()',
+      'mOkhttp3.OkHttpClient#certificatePinner()',
+      'mOkhttp3.OkHttpClient#connectionPool()',
+      'mOkhttp3.OkHttpClient#connectionSpecs()',
+      'mOkhttp3.OkHttpClient#connectTimeoutMillis()',
+      'mOkhttp3.OkHttpClient#cookieJar()',
+      'mOkhttp3.OkHttpClient#dispatcher()',
+      'mOkhttp3.OkHttpClient#dns()',
+      'mOkhttp3.OkHttpClient#eventListenerFactory()',
+      'mOkhttp3.OkHttpClient#followRedirects()',
+      'mOkhttp3.OkHttpClient#followSslRedirects()',
+      'mOkhttp3.OkHttpClient#hostnameVerifier()',
+      'mOkhttp3.OkHttpClient#interceptors()',
+      'mOkhttp3.OkHttpClient#networkInterceptors()',
+      'mOkhttp3.OkHttpClient#pingIntervalMillis()',
+      'mOkhttp3.OkHttpClient#protocols()',
+      'mOkhttp3.OkHttpClient#proxy()',
+      'mOkhttp3.OkHttpClient#proxyAuthenticator()',
+      'mOkhttp3.OkHttpClient#proxySelector()',
+      'mOkhttp3.OkHttpClient#readTimeoutMillis()',
+      'mOkhttp3.OkHttpClient#retryOnConnectionFailure()',
+      'mOkhttp3.OkHttpClient#socketFactory()',
+      'mOkhttp3.OkHttpClient#sslSocketFactory()',
+      'mOkhttp3.OkHttpClient#writeTimeoutMillis()',
+      'mOkhttp3.OkHttpClient#writeTimeoutMillis()',
+      'mOkhttp3.Request$Builder#delete()',
   ]
 }
 check.dependsOn(japicmp)

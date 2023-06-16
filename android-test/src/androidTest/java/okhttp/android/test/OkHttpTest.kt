@@ -22,31 +22,31 @@ import com.google.android.gms.common.GooglePlayServicesNotAvailableException
 import com.google.android.gms.security.ProviderInstaller
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import okhttp3.Cache
-import okhttp3.Call
-import okhttp3.CertificatePinner
-import okhttp3.Connection
-import okhttp3.EventListener
-import okhttp3.HttpUrl.Companion.toHttpUrl
-import okhttp3.OkHttpClient
-import okhttp3.OkHttpClientTestRule
-import okhttp3.Protocol
-import okhttp3.RecordingEventListener
-import okhttp3.Request
-import okhttp3.TlsVersion
-import okhttp3.dnsoverhttps.DnsOverHttps
-import okhttp3.internal.asFactory
-import okhttp3.internal.concurrent.TaskRunner
-import okhttp3.internal.http2.Http2
-import okhttp3.internal.platform.Android10Platform
-import okhttp3.internal.platform.AndroidPlatform
-import okhttp3.internal.platform.Platform
-import okhttp3.logging.LoggingEventListener
-import okhttp3.mockwebserver.MockResponse
-import okhttp3.mockwebserver.MockWebServer
-import okhttp3.testing.PlatformRule
-import okhttp3.tls.HandshakeCertificates
-import okhttp3.tls.internal.TlsUtil.localhost
+import mOkhttp3.Cache
+import mOkhttp3.Call
+import mOkhttp3.CertificatePinner
+import mOkhttp3.Connection
+import mOkhttp3.EventListener
+import mOkhttp3.HttpUrl.Companion.toHttpUrl
+import mOkhttp3.OkHttpClient
+import mOkhttp3.OkHttpClientTestRule
+import mOkhttp3.Protocol
+import mOkhttp3.RecordingEventListener
+import mOkhttp3.Request
+import mOkhttp3.TlsVersion
+import mOkhttp3.dnsoverhttps.DnsOverHttps
+import mOkhttp3.internal.asFactory
+import mOkhttp3.internal.concurrent.TaskRunner
+import mOkhttp3.internal.http2.Http2
+import mOkhttp3.internal.platform.Android10Platform
+import mOkhttp3.internal.platform.AndroidPlatform
+import mOkhttp3.internal.platform.Platform
+import mOkhttp3.logging.LoggingEventListener
+import mOkhttp3.mockwebserver.MockResponse
+import mOkhttp3.mockwebserver.MockWebServer
+import mOkhttp3.testing.PlatformRule
+import mOkhttp3.tls.HandshakeCertificates
+import mOkhttp3.tls.internal.TlsUtil.localhost
 import okio.ByteString.Companion.toByteString
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 import org.bouncycastle.jsse.provider.BouncyCastleJsseProvider
@@ -694,7 +694,7 @@ class OkHttpTest {
 
     Logger.getLogger("")
         .addHandler(testHandler)
-    Logger.getLogger("okhttp3")
+    Logger.getLogger("mOkhttp3")
         .addHandler(testHandler)
     Logger.getLogger(Http2::class.java.name)
         .addHandler(testHandler)

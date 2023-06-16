@@ -2,7 +2,7 @@ apply plugin: 'me.champeau.gradle.japicmp'
 
 jar {
   manifest {
-    attributes('Automatic-Module-Name': 'okhttp3.sse')
+    attributes('Automatic-Module-Name': 'mOkhttp3.sse')
   }
 }
 
@@ -28,12 +28,12 @@ task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   oldClasspath = files(baselineJar(project, baselineVersion))
   newClasspath = files(jar.archivePath)
   onlyBinaryIncompatibleModified = true
-  failOnModification = true
+  failOnModification = false
   txtOutputFile = file("$buildDir/reports/japi.txt")
   ignoreMissingClasses = true
   includeSynthetic = true
   packageExcludes = [
-      'okhttp3.internal.sse',
+      'mOkhttp3.internal.sse',
   ]
 }
 check.dependsOn(japicmp)

@@ -2,8 +2,8 @@ apply plugin: 'com.github.johnrengelman.shadow'
 
 jar {
   manifest {
-    attributes 'Automatic-Module-Name': 'okhttp3.curl'
-    attributes 'Main-Class': 'okhttp3.curl.Main'
+    attributes 'Automatic-Module-Name': 'mOkhttp3.curl'
+    attributes 'Main-Class': 'mOkhttp3.curl.Main'
   }
 }
 
