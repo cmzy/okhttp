@@ -22,7 +22,7 @@ import java.net.UnknownHostException;
 import java.util.Collections;
 import mOkhttp3.Headers;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
+import mOkio.Buffer;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;

@@ -20,7 +20,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicReference;
-import okio.ByteString;
+import mOkio.ByteString;
 
 import static mOkhttp3.internal.Util.userAgent;
 

@@ -22,8 +22,8 @@ import java.security.Signature
 import java.security.SignatureException
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
-import okio.Buffer
-import okio.ByteString
+import mOkio.Buffer
+import mOkio.ByteString
 
 internal data class Certificate(
   val tbsCertificate: TbsCertificate,

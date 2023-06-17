@@ -26,7 +26,7 @@ import mOkhttp3.Headers
 import mOkhttp3.HttpUrl
 import mOkhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import mOkhttp3.TlsVersion
-import okio.Buffer
+import mOkio.Buffer
 
 /** An HTTP request that came into the mock web server. */
 class RecordedRequest @JvmOverloads constructor(

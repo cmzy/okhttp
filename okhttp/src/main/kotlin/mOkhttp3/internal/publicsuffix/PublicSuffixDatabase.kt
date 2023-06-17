@@ -23,9 +23,9 @@ import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicBoolean
 import mOkhttp3.internal.and
 import mOkhttp3.internal.platform.Platform
-import okio.GzipSource
-import okio.buffer
-import okio.source
+import mOkio.GzipSource
+import mOkio.buffer
+import mOkio.source
 
 /**
  * A database of public suffixes provided by [publicsuffix.org][publicsuffix_org].

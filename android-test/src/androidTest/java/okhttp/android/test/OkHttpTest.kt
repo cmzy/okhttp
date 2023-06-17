@@ -47,7 +47,7 @@ import mOkhttp3.mockwebserver.MockWebServer
 import mOkhttp3.testing.PlatformRule
 import mOkhttp3.tls.HandshakeCertificates
 import mOkhttp3.tls.internal.TlsUtil.localhost
-import okio.ByteString.Companion.toByteString
+import mOkio.ByteString.Companion.toByteString
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 import org.bouncycastle.jsse.provider.BouncyCastleJsseProvider
 import org.conscrypt.Conscrypt

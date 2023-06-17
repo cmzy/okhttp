@@ -15,7 +15,7 @@
  */
 package mOkhttp3
 
-import okio.ByteString
+import mOkio.ByteString
 
 abstract class WebSocketListener {
   /**

@@ -23,10 +23,10 @@ import java.util.concurrent.TimeUnit
 import mOkhttp3.internal.http2.ErrorCode
 import mOkhttp3.internal.http2.Http2Stream
 import mOkhttp3.mockwebserver.RecordedRequest
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.buffer
-import okio.utf8Size
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.buffer
+import mOkio.utf8Size
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Assert.fail

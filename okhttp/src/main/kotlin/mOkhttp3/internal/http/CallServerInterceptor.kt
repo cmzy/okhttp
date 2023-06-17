@@ -20,7 +20,7 @@ import java.net.ProtocolException
 import mOkhttp3.Interceptor
 import mOkhttp3.Response
 import mOkhttp3.internal.EMPTY_RESPONSE
-import okio.buffer
+import mOkio.buffer
 
 /** This is the last interceptor in the chain. It makes a network call to the server. */
 class CallServerInterceptor(private val forWebSocket: Boolean) : Interceptor {

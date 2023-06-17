@@ -65,11 +65,11 @@ import mOkhttp3.internal.tls.OkHostnameVerifier
 import mOkhttp3.internal.toHostHeader
 import mOkhttp3.internal.userAgent
 import mOkhttp3.internal.ws.RealWebSocket
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.buffer
-import okio.sink
-import okio.source
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.buffer
+import mOkio.sink
+import mOkio.source
 
 /**
  * A connection to a remote web server capable of carrying 1 or more concurrent streams.

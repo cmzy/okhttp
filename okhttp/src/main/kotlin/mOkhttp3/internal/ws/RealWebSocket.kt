@@ -44,11 +44,11 @@ import mOkhttp3.internal.ws.WebSocketProtocol.CLOSE_MESSAGE_MAX
 import mOkhttp3.internal.ws.WebSocketProtocol.OPCODE_BINARY
 import mOkhttp3.internal.ws.WebSocketProtocol.OPCODE_TEXT
 import mOkhttp3.internal.ws.WebSocketProtocol.validateCloseCode
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ByteString
-import okio.ByteString.Companion.encodeUtf8
-import okio.ByteString.Companion.toByteString
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ByteString
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString.Companion.toByteString
 
 class RealWebSocket(
   taskRunner: TaskRunner,

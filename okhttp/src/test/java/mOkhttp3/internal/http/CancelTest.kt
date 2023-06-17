@@ -50,8 +50,8 @@ import mOkhttp3.mockwebserver.MockResponse
 import mOkhttp3.mockwebserver.MockWebServer
 import mOkhttp3.testing.PlatformRule
 import mOkhttp3.tls.internal.TlsUtil
-import okio.Buffer
-import okio.BufferedSink
+import mOkio.Buffer
+import mOkio.BufferedSink
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.assertEquals
 import org.junit.Assert.fail

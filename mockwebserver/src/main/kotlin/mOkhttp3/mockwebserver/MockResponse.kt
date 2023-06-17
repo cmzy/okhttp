@@ -21,7 +21,7 @@ import mOkhttp3.WebSocketListener
 import mOkhttp3.internal.addHeaderLenient
 import mOkhttp3.internal.http2.Settings
 import mOkhttp3.mockwebserver.internal.duplex.DuplexResponseBody
-import okio.Buffer
+import mOkio.Buffer
 
 /** A scripted response to be replayed by the mock web server. */
 class MockResponse : Cloneable {

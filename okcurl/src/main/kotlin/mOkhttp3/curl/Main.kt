@@ -42,7 +42,7 @@ import mOkhttp3.internal.http2.Http2
 import mOkhttp3.internal.platform.Platform
 import mOkhttp3.logging.HttpLoggingInterceptor
 import mOkhttp3.logging.LoggingEventListener
-import okio.sink
+import mOkio.sink
 import picocli.CommandLine
 import picocli.CommandLine.Command
 import picocli.CommandLine.IVersionProvider

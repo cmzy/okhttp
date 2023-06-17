@@ -18,7 +18,7 @@ package mOkhttp3.internal.http
 import mOkhttp3.MediaType
 import mOkhttp3.MediaType.Companion.toMediaTypeOrNull
 import mOkhttp3.ResponseBody
-import okio.BufferedSource
+import mOkio.BufferedSource
 
 class RealResponseBody(
   /**

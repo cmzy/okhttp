@@ -16,11 +16,11 @@
 package mOkhttp3;
 
 import java.io.IOException;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.Okio;
-import okio.Source;
-import okio.Timeout;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.Okio;
+import mOkio.Source;
+import mOkio.Timeout;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

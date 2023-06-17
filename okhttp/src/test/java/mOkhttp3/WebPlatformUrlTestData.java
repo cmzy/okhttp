@@ -20,8 +20,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.BufferedSource;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
 
 /**
  * A test from the <a href="https://github.com/w3c/web-platform-tests/tree/master/url">Web Platform

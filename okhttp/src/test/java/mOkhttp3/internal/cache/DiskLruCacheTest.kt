@@ -28,8 +28,8 @@ import mOkhttp3.internal.io.FaultyFileSystem
 import mOkhttp3.internal.io.FileSystem
 import mOkhttp3.internal.io.InMemoryFileSystem
 import mOkhttp3.internal.io.WindowsFileSystem
-import okio.Source
-import okio.buffer
+import mOkio.Source
+import mOkio.buffer
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assumptions.assumeThat
 import org.junit.After

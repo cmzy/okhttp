@@ -16,7 +16,7 @@
 package mOkhttp3.internal.http1
 
 import mOkhttp3.Headers
-import okio.BufferedSource
+import mOkio.BufferedSource
 
 /**
  * Parse all headers delimited by "\r\n" until an empty line. This throws if headers exceed 256 KiB.

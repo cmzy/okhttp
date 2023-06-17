@@ -16,7 +16,7 @@
 package mOkhttp3.internal.http2
 
 import mOkhttp3.internal.format
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString.Companion.encodeUtf8
 
 object Http2 {
   @JvmField

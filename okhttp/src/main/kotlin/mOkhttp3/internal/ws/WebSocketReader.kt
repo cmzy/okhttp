@@ -40,9 +40,9 @@ import mOkhttp3.internal.ws.WebSocketProtocol.PAYLOAD_BYTE_MAX
 import mOkhttp3.internal.ws.WebSocketProtocol.PAYLOAD_LONG
 import mOkhttp3.internal.ws.WebSocketProtocol.PAYLOAD_SHORT
 import mOkhttp3.internal.ws.WebSocketProtocol.toggleMask
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString
 
 /**
  * An [RFC 6455][rfc_6455]-compatible WebSocket frame reader.

@@ -18,7 +18,7 @@ package mOkhttp3.curl;
 import java.io.IOException;
 import mOkhttp3.Request;
 import mOkhttp3.RequestBody;
-import okio.Buffer;
+import mOkio.Buffer;
 import org.junit.Test;
 import picocli.CommandLine;
 

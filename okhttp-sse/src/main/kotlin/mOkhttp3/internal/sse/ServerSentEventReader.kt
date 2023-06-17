@@ -17,10 +17,10 @@ package mOkhttp3.internal.sse
 
 import java.io.IOException
 import mOkhttp3.internal.toLongOrDefault
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString.Companion.encodeUtf8
-import okio.Options
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.Options
 
 class ServerSentEventReader(
   private val source: BufferedSource,

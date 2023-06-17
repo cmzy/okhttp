@@ -17,10 +17,10 @@ package mOkhttp3.internal.publicsuffix;
 
 import java.io.IOException;
 import java.io.InputStream;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.GzipSource;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.GzipSource;
+import mOkio.Okio;
 import org.junit.Test;
 
 import static mOkhttp3.internal.HostnamesKt.toCanonicalHost;

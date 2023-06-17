@@ -25,7 +25,7 @@ import mOkhttp3.mockwebserver.Dispatcher;
 import mOkhttp3.mockwebserver.MockResponse;
 import mOkhttp3.mockwebserver.MockWebServer;
 import mOkhttp3.mockwebserver.RecordedRequest;
-import okio.ByteString;
+import mOkio.ByteString;
 
 /**
  * Runs a MockWebServer on localhost and uses it as the backend to receive an OAuth session.

@@ -20,7 +20,7 @@ import mOkhttp3.MediaType.Companion.toMediaType
 import mOkhttp3.OkHttpClient
 import mOkhttp3.Request
 import mOkhttp3.RequestBody
-import okio.BufferedSink
+import mOkio.BufferedSink
 
 class PostStreaming {
   private val client = OkHttpClient()

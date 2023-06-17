@@ -15,8 +15,8 @@
  */
 package mOkhttp3.tls.internal.der
 
-import okio.Buffer
-import okio.ByteString
+import mOkio.Buffer
+import mOkio.ByteString
 
 /**
  * Encode and decode a model object like a [Long] or [Certificate] as DER bytes.

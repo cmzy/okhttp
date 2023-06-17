@@ -18,7 +18,7 @@ package mOkhttp3.internal.io
 import java.io.File
 import java.io.IOException
 import mOkhttp3.TestUtil
-import okio.buffer
+import mOkio.buffer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Rule
 import org.junit.Test

@@ -21,9 +21,9 @@ import javax.net.ssl.SSLPeerUnverifiedException
 import mOkhttp3.internal.filterList
 import mOkhttp3.internal.tls.CertificateChainCleaner
 import mOkhttp3.internal.toCanonicalHost
-import okio.ByteString
-import okio.ByteString.Companion.decodeBase64
-import okio.ByteString.Companion.toByteString
+import mOkio.ByteString
+import mOkio.ByteString.Companion.decodeBase64
+import mOkio.ByteString.Companion.toByteString
 
 /**
  * Constrains which certificates are trusted. Pinning certificates defends against attacks on

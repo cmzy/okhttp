@@ -18,8 +18,8 @@ package mOkhttp3.internal.ws
 import java.io.Closeable
 import java.io.IOException
 import java.util.zip.Inflater
-import okio.Buffer
-import okio.InflaterSource
+import mOkio.Buffer
+import mOkio.InflaterSource
 
 private const val OCTETS_TO_ADD_BEFORE_INFLATION = 0x0000ffff
 

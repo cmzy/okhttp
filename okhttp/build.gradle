@@ -22,7 +22,7 @@ task copyJavaTemplates(type: Copy) {
 }
 
 dependencies {
-  api deps.okio
+  api files("../libs/okio-jvm-2.8.0.jar")
   api deps.kotlinStdlib
   compileOnly deps.android
   compileOnly deps.bouncycastle

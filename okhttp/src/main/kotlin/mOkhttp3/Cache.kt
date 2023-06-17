@@ -37,17 +37,17 @@ import mOkhttp3.internal.http.StatusLine
 import mOkhttp3.internal.io.FileSystem
 import mOkhttp3.internal.platform.Platform
 import mOkhttp3.internal.toLongOrDefault
-import okio.Buffer
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ByteString.Companion.decodeBase64
-import okio.ByteString.Companion.encodeUtf8
-import okio.ByteString.Companion.toByteString
-import okio.ForwardingSink
-import okio.ForwardingSource
-import okio.Sink
-import okio.Source
-import okio.buffer
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ByteString.Companion.decodeBase64
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString.Companion.toByteString
+import mOkio.ForwardingSink
+import mOkio.ForwardingSource
+import mOkio.Sink
+import mOkio.Source
+import mOkio.buffer
 
 /**
  * Caches HTTP and HTTPS responses to the filesystem so they may be reused, saving time and

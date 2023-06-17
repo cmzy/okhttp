@@ -21,9 +21,9 @@ package mOkhttp3.tls
 import java.security.GeneralSecurityException
 import java.security.cert.CertificateFactory
 import java.security.cert.X509Certificate
-import okio.Buffer
-import okio.ByteString
-import okio.ByteString.Companion.toByteString
+import mOkio.Buffer
+import mOkio.ByteString
+import mOkio.ByteString.Companion.toByteString
 
 /**
  * Decodes a multiline string that contains a [certificate][certificatePem] which is

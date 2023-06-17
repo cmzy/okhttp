@@ -21,7 +21,7 @@ import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.RequestBody;
 import mOkhttp3.Response;
-import okio.BufferedSink;
+import mOkio.BufferedSink;
 
 public final class PostStreaming {
   public static final MediaType MEDIA_TYPE_MARKDOWN

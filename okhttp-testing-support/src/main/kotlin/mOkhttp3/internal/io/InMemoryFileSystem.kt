@@ -20,11 +20,11 @@ import java.io.FileNotFoundException
 import java.io.IOException
 import java.util.IdentityHashMap
 import mOkhttp3.TestUtil.isDescendentOf
-import okio.Buffer
-import okio.ForwardingSink
-import okio.ForwardingSource
-import okio.Sink
-import okio.Source
+import mOkio.Buffer
+import mOkio.ForwardingSink
+import mOkio.ForwardingSource
+import mOkio.Sink
+import mOkio.Source
 import org.junit.rules.TestRule
 import org.junit.runner.Description
 import org.junit.runners.model.Statement

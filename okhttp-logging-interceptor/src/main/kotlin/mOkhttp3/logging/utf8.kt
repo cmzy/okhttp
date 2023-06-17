@@ -16,7 +16,7 @@
 package mOkhttp3.logging
 
 import java.io.EOFException
-import okio.Buffer
+import mOkio.Buffer
 
 /**
  * Returns true if the body in question probably contains human readable text. Uses a small

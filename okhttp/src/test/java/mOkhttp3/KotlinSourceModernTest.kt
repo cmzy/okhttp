@@ -71,11 +71,11 @@ import mOkhttp3.mockwebserver.SocketPolicy
 import mOkhttp3.tls.HandshakeCertificates
 import mOkhttp3.tls.HeldCertificate
 import mOkhttp3.tls.internal.TlsUtil.localhost
-import okio.Buffer
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ByteString
-import okio.Timeout
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ByteString
+import mOkio.Timeout
 import org.junit.Ignore
 import org.junit.Test
 

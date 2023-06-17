@@ -19,8 +19,8 @@ import java.net.InetAddress
 import java.net.ServerSocket
 import java.net.Socket
 import java.util.LinkedHashMap
-import okio.buffer
-import okio.source
+import mOkio.buffer
+import mOkio.source
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.fail
 import org.junit.Test

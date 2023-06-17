@@ -20,8 +20,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.util.UUID;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 import org.junit.Test;
 
 import static java.nio.charset.StandardCharsets.UTF_8;

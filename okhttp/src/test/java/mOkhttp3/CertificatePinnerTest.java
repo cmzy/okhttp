@@ -26,7 +26,7 @@ import static java.util.Arrays.asList;
 import static java.util.Collections.emptyList;
 import static java.util.Collections.singletonList;
 import static mOkhttp3.CertificatePinner.sha1Hash;
-import static okio.ByteString.decodeBase64;
+import static mOkio.ByteString.decodeBase64;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

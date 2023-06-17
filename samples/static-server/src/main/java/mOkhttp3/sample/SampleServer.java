@@ -15,8 +15,8 @@ import mOkhttp3.mockwebserver.Dispatcher;
 import mOkhttp3.mockwebserver.MockResponse;
 import mOkhttp3.mockwebserver.MockWebServer;
 import mOkhttp3.mockwebserver.RecordedRequest;
-import okio.Buffer;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.Okio;
 
 public class SampleServer extends Dispatcher {
   private final SSLContext sslContext;

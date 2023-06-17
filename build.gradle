@@ -17,7 +17,7 @@ buildscript {
       'junit': '4.13',
       'kotlin': '1.4.10',
       'moshi': '1.9.2',
-      'okio': '2.8.0',
+//      'okio': '2.8.0',
       'ktlint': '0.38.0',
       'picocli': '4.2.0',
       'openjsse': '1.1.0'
@@ -42,7 +42,7 @@ buildscript {
       'kotlinStdlib': "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
       'moshi': "com.squareup.moshi:moshi:${versions.moshi}",
       'moshiKotlin': "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}",
-      'okio': "com.squareup.okio:okio:${versions.okio}",
+//      'okio': "com.squareup.okio:okio:${versions.okio}",
       'openjsse': "org.openjsse:openjsse:${versions.openjsse}"
   ]
 

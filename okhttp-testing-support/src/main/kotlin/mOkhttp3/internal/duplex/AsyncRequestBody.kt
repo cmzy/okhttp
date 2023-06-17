@@ -20,7 +20,7 @@ import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.TimeUnit.SECONDS
 import mOkhttp3.MediaType
 import mOkhttp3.RequestBody
-import okio.BufferedSink
+import mOkio.BufferedSink
 import org.junit.Assert.assertTrue
 
 /** A duplex request body that keeps the provided sinks so they can be written to later.  */

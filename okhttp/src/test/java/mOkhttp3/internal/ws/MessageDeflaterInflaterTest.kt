@@ -17,10 +17,10 @@ package mOkhttp3.internal.ws
 
 import java.io.EOFException
 import mOkhttp3.TestUtil.fragmentBuffer
-import okio.Buffer
-import okio.ByteString
-import okio.ByteString.Companion.decodeHex
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.Buffer
+import mOkio.ByteString
+import mOkio.ByteString.Companion.decodeHex
+import mOkio.ByteString.Companion.encodeUtf8
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.fail
 import org.junit.Test

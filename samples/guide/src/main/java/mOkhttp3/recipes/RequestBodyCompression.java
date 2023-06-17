@@ -27,9 +27,9 @@ import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.RequestBody;
 import mOkhttp3.Response;
-import okio.BufferedSink;
-import okio.GzipSink;
-import okio.Okio;
+import mOkio.BufferedSink;
+import mOkio.GzipSink;
+import mOkio.Okio;
 
 public final class RequestBodyCompression {
   /**

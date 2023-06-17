@@ -16,7 +16,7 @@
 package mOkhttp3.internal.cache
 
 import java.io.IOException
-import okio.Sink
+import mOkio.Sink
 
 interface CacheRequest {
   @Throws(IOException::class)

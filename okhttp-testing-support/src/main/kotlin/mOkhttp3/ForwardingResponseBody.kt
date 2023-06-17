@@ -15,7 +15,7 @@
  */
 package mOkhttp3
 
-import okio.BufferedSource
+import mOkio.BufferedSource
 
 open class ForwardingResponseBody(delegate: ResponseBody?) : ResponseBody() {
   private val delegate: ResponseBody

@@ -22,7 +22,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.TimeZone
 import kotlin.reflect.KClass
-import okio.ByteString
+import mOkio.ByteString
 
 /**
  * Built-in adapters for reading standard ASN.1 types.

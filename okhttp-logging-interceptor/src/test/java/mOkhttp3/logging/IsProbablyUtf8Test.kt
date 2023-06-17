@@ -15,7 +15,7 @@
  */
 package mOkhttp3.logging
 
-import okio.Buffer
+import mOkio.Buffer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 

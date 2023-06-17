@@ -18,11 +18,11 @@ package mOkhttp3.internal.io
 import java.io.File
 import java.io.FileNotFoundException
 import java.io.IOException
-import okio.Sink
-import okio.Source
-import okio.appendingSink
-import okio.sink
-import okio.source
+import mOkio.Sink
+import mOkio.Source
+import mOkio.appendingSink
+import mOkio.sink
+import mOkio.source
 
 /**
  * Access to read and write files on a hierarchical data store. Most callers should use the

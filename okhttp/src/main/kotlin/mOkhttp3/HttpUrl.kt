@@ -33,7 +33,7 @@ import mOkhttp3.internal.indexOfLastNonAsciiWhitespace
 import mOkhttp3.internal.parseHexDigit
 import mOkhttp3.internal.publicsuffix.PublicSuffixDatabase
 import mOkhttp3.internal.toCanonicalHost
-import okio.Buffer
+import mOkio.Buffer
 
 /**
  * A uniform resource locator (URL) with a scheme of either `http` or `https`. Use this class to

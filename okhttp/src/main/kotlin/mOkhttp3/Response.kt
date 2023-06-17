@@ -28,7 +28,7 @@ import mOkhttp3.internal.connection.Exchange
 import mOkhttp3.internal.http.StatusLine.Companion.HTTP_PERM_REDIRECT
 import mOkhttp3.internal.http.StatusLine.Companion.HTTP_TEMP_REDIRECT
 import mOkhttp3.internal.http.parseChallenges
-import okio.Buffer
+import mOkio.Buffer
 
 /**
  * An HTTP response. Instances of this class are not immutable: the response body is a one-shot

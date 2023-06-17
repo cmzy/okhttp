@@ -36,13 +36,13 @@ import mOkhttp3.internal.http.StatusLine.Companion.HTTP_CONTINUE
 import mOkhttp3.internal.http.promisesBody
 import mOkhttp3.internal.http.receiveHeaders
 import mOkhttp3.internal.skipAll
-import okio.Buffer
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ForwardingTimeout
-import okio.Sink
-import okio.Source
-import okio.Timeout
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ForwardingTimeout
+import mOkio.Sink
+import mOkio.Source
+import mOkio.Timeout
 
 /**
  * A socket connection that can be used to send HTTP/1.1 messages. This class strictly enforces the

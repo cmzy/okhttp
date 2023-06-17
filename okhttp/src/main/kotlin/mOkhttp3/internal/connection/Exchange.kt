@@ -26,12 +26,12 @@ import mOkhttp3.ResponseBody
 import mOkhttp3.internal.http.ExchangeCodec
 import mOkhttp3.internal.http.RealResponseBody
 import mOkhttp3.internal.ws.RealWebSocket
-import okio.Buffer
-import okio.ForwardingSink
-import okio.ForwardingSource
-import okio.Sink
-import okio.Source
-import okio.buffer
+import mOkio.Buffer
+import mOkio.ForwardingSink
+import mOkio.ForwardingSource
+import mOkio.Sink
+import mOkio.Source
+import mOkio.buffer
 
 /**
  * Transmits a single HTTP request and a response pair. This layers connection management and events

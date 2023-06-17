@@ -26,7 +26,7 @@ import java.security.spec.X509EncodedKeySpec;
 import java.util.concurrent.TimeUnit;
 
 import mOkhttp3.testing.PlatformRule;
-import okio.ByteString;
+import mOkio.ByteString;
 import org.bouncycastle.asn1.x509.GeneralName;
 import org.junit.Rule;
 import org.junit.Test;

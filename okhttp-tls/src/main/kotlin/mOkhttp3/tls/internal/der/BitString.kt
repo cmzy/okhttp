@@ -15,7 +15,7 @@
  */
 package mOkhttp3.tls.internal.der
 
-import okio.ByteString
+import mOkio.ByteString
 
 /**
  * Like a [ByteString], but whose bits are not necessarily a strict multiple of 8.

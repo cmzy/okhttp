@@ -25,11 +25,11 @@ import mOkhttp3.internal.http2.Header.Companion.TARGET_AUTHORITY
 import mOkhttp3.internal.http2.Header.Companion.TARGET_METHOD
 import mOkhttp3.internal.http2.Header.Companion.TARGET_PATH
 import mOkhttp3.internal.http2.Header.Companion.TARGET_SCHEME
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString
-import okio.Source
-import okio.buffer
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString
+import mOkio.Source
+import mOkio.buffer
 
 /**
  * Read and write HPACK v10.

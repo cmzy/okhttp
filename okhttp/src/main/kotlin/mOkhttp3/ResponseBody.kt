@@ -25,9 +25,9 @@ import kotlin.text.Charsets.UTF_8
 import mOkhttp3.MediaType.Companion.toMediaTypeOrNull
 import mOkhttp3.internal.closeQuietly
 import mOkhttp3.internal.readBomAsCharset
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString
 
 /**
  * A one-shot stream from the origin server to the client application with the raw bytes of the

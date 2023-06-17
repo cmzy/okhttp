@@ -37,8 +37,8 @@ import mOkhttp3.internal.http2.Http2.TYPE_SETTINGS
 import mOkhttp3.internal.http2.Http2.TYPE_WINDOW_UPDATE
 import mOkhttp3.internal.http2.Http2.frameLog
 import mOkhttp3.internal.writeMedium
-import okio.Buffer
-import okio.BufferedSink
+import mOkio.Buffer
+import mOkio.BufferedSink
 
 /** Writes HTTP/2 transport frames. */
 @Suppress("NAME_SHADOWING")

@@ -33,7 +33,9 @@ class ParseResponseWithMoshi {
     client.newCall(request).execute().use { response ->
       if (!response.isSuccessful) throw IOException("Unexpected code $response")
 
-      val gist = gistJsonAdapter.fromJson(response.body!!.source())
+      val source = response.body!!.source()
+      val sourceOkio = okio.Okio.source(source.inputStream())
+      val gist = gistJsonAdapter.fromJson(okio.Okio.buffer(sourceOkio))
 
       for ((key, value) in gist!!.files!!) {
         println(key)

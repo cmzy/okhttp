@@ -23,12 +23,12 @@ import java.util.TreeSet;
 import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.GzipSink;
-import okio.Okio;
-import okio.Sink;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.GzipSink;
+import mOkio.Okio;
+import mOkio.Sink;
 
 /**
  * Downloads the public suffix list from https://publicsuffix.org/list/public_suffix_list.dat and

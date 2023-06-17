@@ -34,12 +34,12 @@ import mOkhttp3.internal.isCivilized
 import mOkhttp3.internal.okHttpName
 import mOkhttp3.internal.platform.Platform
 import mOkhttp3.internal.platform.Platform.Companion.WARN
-import okio.BufferedSink
-import okio.ForwardingSource
-import okio.Sink
-import okio.Source
-import okio.blackholeSink
-import okio.buffer
+import mOkio.BufferedSink
+import mOkio.ForwardingSource
+import mOkio.Sink
+import mOkio.Source
+import mOkio.blackholeSink
+import mOkio.buffer
 
 /**
  * A cache that uses a bounded amount of space on a filesystem. Each cache entry has a string key

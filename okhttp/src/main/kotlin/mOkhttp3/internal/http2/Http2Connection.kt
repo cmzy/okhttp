@@ -35,13 +35,13 @@ import mOkhttp3.internal.platform.Platform
 import mOkhttp3.internal.platform.Platform.Companion.INFO
 import mOkhttp3.internal.toHeaders
 import mOkhttp3.internal.wait
-import okio.Buffer
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ByteString
-import okio.buffer
-import okio.sink
-import okio.source
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ByteString
+import mOkio.buffer
+import mOkio.sink
+import mOkio.source
 
 /**
  * A socket connection to a remote peer. A connection hosts streams which can send and receive

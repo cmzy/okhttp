@@ -21,9 +21,9 @@ import java.nio.charset.Charset
 import kotlin.text.Charsets.UTF_8
 import mOkhttp3.MediaType.Companion.toMediaTypeOrNull
 import mOkhttp3.internal.checkOffsetAndCount
-import okio.BufferedSink
-import okio.ByteString
-import okio.source
+import mOkio.BufferedSink
+import mOkio.ByteString
+import mOkio.source
 
 abstract class RequestBody {
 

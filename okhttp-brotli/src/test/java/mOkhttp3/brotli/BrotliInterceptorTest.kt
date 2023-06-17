@@ -21,10 +21,10 @@ import mOkhttp3.Protocol
 import mOkhttp3.Request
 import mOkhttp3.Response
 import mOkhttp3.ResponseBody.Companion.toResponseBody
-import okio.ByteString
-import okio.ByteString.Companion.EMPTY
-import okio.ByteString.Companion.decodeHex
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString
+import mOkio.ByteString.Companion.EMPTY
+import mOkio.ByteString.Companion.decodeHex
+import mOkio.ByteString.Companion.encodeUtf8
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.fail
 import org.junit.Test

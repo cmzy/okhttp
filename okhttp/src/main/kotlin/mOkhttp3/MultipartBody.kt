@@ -19,10 +19,10 @@ import java.io.IOException
 import java.util.UUID
 import mOkhttp3.MediaType.Companion.toMediaType
 import mOkhttp3.internal.toImmutableList
-import okio.Buffer
-import okio.BufferedSink
-import okio.ByteString
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.ByteString
+import mOkio.ByteString.Companion.encodeUtf8
 
 /**
  * An [RFC 2387][rfc_2387]-compliant request body.

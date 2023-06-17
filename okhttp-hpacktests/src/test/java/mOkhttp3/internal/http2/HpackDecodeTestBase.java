@@ -23,7 +23,7 @@ import java.util.List;
 import mOkhttp3.internal.http2.hpackjson.Case;
 import mOkhttp3.internal.http2.hpackjson.HpackJsonUtil;
 import mOkhttp3.internal.http2.hpackjson.Story;
-import okio.Buffer;
+import mOkio.Buffer;
 
 import static mOkhttp3.internal.http2.hpackjson.Story.MISSING;
 import static org.assertj.core.api.Assertions.assertThat;

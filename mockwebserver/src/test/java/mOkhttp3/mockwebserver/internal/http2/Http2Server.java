@@ -34,9 +34,9 @@ import mOkhttp3.internal.http2.Header;
 import mOkhttp3.internal.http2.Http2Connection;
 import mOkhttp3.internal.http2.Http2Stream;
 import mOkhttp3.internal.platform.Platform;
-import okio.BufferedSink;
-import okio.Okio;
-import okio.Source;
+import mOkio.BufferedSink;
+import mOkio.Okio;
+import mOkio.Source;
 
 import static java.util.Arrays.asList;
 import static mOkhttp3.internal.Util.closeQuietly;

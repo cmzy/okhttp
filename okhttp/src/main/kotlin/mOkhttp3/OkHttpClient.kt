@@ -42,8 +42,8 @@ import mOkhttp3.internal.tls.CertificateChainCleaner
 import mOkhttp3.internal.tls.OkHostnameVerifier
 import mOkhttp3.internal.toImmutableList
 import mOkhttp3.internal.ws.RealWebSocket
-import okio.Sink
-import okio.Source
+import mOkio.Sink
+import mOkio.Source
 import org.codehaus.mojo.animal_sniffer.IgnoreJRERequirement
 
 /**

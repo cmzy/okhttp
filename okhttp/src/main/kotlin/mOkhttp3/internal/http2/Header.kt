@@ -15,8 +15,8 @@
  */
 package mOkhttp3.internal.http2
 
-import okio.ByteString
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString
+import mOkio.ByteString.Companion.encodeUtf8
 
 /** HTTP header: the name is an ASCII string, but the value can be UTF-8. */
 data class Header(

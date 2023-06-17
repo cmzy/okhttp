@@ -31,7 +31,7 @@ import mOkhttp3.mockwebserver.SocketPolicy
 import mOkhttp3.testing.Flaky
 import mOkhttp3.testing.PlatformRule
 import mOkhttp3.tls.internal.TlsUtil.localhost
-import okio.BufferedSink
+import mOkio.BufferedSink
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.assertEquals
 import org.junit.Assert.fail

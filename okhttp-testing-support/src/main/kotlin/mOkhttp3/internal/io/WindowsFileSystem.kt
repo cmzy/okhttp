@@ -18,11 +18,11 @@ package mOkhttp3.internal.io
 import java.io.File
 import java.util.Collections
 import mOkhttp3.TestUtil.isDescendentOf
-import okio.ForwardingSink
-import okio.ForwardingSource
-import okio.IOException
-import okio.Sink
-import okio.Source
+import mOkio.ForwardingSink
+import mOkio.ForwardingSource
+import mOkio.IOException
+import mOkio.Sink
+import mOkio.Source
 
 /**
  * Emulate Windows file system limitations on any file system. In particular, Windows will throw an

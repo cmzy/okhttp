@@ -17,12 +17,12 @@ package mOkhttp3.tls.internal.der
 
 import java.math.BigInteger
 import java.net.ProtocolException
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString
-import okio.ForwardingSource
-import okio.Source
-import okio.buffer
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString
+import mOkio.ForwardingSource
+import mOkio.Source
+import mOkio.buffer
 
 /**
  * Streaming decoder of data encoded following Abstract Syntax Notation One (ASN.1). There are

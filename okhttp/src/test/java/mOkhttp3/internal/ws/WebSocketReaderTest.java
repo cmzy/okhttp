@@ -20,8 +20,8 @@ import java.io.IOException;
 import java.net.ProtocolException;
 import java.util.Random;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 import org.junit.After;
 import org.junit.Test;
 

@@ -50,9 +50,9 @@ import mOkhttp3.tls.internal.der.ObjectIdentifiers.sha256withEcdsa
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.subjectAlternativeName
 import mOkhttp3.tls.internal.der.TbsCertificate
 import mOkhttp3.tls.internal.der.Validity
-import okio.ByteString
-import okio.ByteString.Companion.decodeBase64
-import okio.ByteString.Companion.toByteString
+import mOkio.ByteString
+import mOkio.ByteString.Companion.decodeBase64
+import mOkio.ByteString.Companion.toByteString
 
 /**
  * A certificate and its private key. These are some properties of certificates that are used with

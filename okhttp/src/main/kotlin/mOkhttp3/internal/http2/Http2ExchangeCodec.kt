@@ -43,8 +43,8 @@ import mOkhttp3.internal.http2.Header.Companion.TARGET_PATH_UTF8
 import mOkhttp3.internal.http2.Header.Companion.TARGET_SCHEME
 import mOkhttp3.internal.http2.Header.Companion.TARGET_SCHEME_UTF8
 import mOkhttp3.internal.immutableListOf
-import okio.Sink
-import okio.Source
+import mOkio.Sink
+import mOkio.Source
 
 /** Encode requests and responses using HTTP/2 frames. */
 class Http2ExchangeCodec(

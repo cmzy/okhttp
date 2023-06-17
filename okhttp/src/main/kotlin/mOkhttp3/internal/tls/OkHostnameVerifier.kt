@@ -18,7 +18,7 @@ package mOkhttp3.internal.tls
 
 import mOkhttp3.internal.canParseAsIpAddress
 import mOkhttp3.internal.toCanonicalHost
-import okio.utf8Size
+import mOkio.utf8Size
 import java.security.cert.CertificateParsingException
 import java.security.cert.X509Certificate
 import java.util.Locale

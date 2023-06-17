@@ -21,7 +21,7 @@ import mOkhttp3.Headers.Companion.headersOf
 import mOkhttp3.MediaType.Companion.toMediaType
 import mOkhttp3.RequestBody.Companion.toRequestBody
 import mOkhttp3.ResponseBody.Companion.toResponseBody
-import okio.Buffer
+import mOkio.Buffer
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.fail
 import org.junit.Test

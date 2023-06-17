@@ -7,7 +7,7 @@ jar {
 }
 
 dependencies {
-  api deps.okio
+  api files("../libs/okio-jvm-2.8.0.jar")
   implementation project(':okhttp')
   compileOnly deps.jsr305
   compileOnly deps.animalSniffer

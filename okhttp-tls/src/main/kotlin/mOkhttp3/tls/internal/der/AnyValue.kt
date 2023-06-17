@@ -15,7 +15,7 @@
  */
 package mOkhttp3.tls.internal.der
 
-import okio.ByteString
+import mOkio.ByteString
 
 /**
  * A value whose type is not specified statically. Use this with [Adapters.any] which will attempt

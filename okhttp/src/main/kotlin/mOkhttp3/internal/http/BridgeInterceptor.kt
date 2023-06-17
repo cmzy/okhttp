@@ -23,8 +23,8 @@ import mOkhttp3.Interceptor
 import mOkhttp3.Response
 import mOkhttp3.internal.toHostHeader
 import mOkhttp3.internal.userAgent
-import okio.GzipSource
-import okio.buffer
+import mOkio.GzipSource
+import mOkio.buffer
 
 /**
  * Bridges from application code to network code. First it builds a network request from a user

@@ -43,11 +43,11 @@ import mOkhttp3.internal.http2.Http2.TYPE_WINDOW_UPDATE
 import mOkhttp3.internal.http2.Http2.formattedType
 import mOkhttp3.internal.http2.Http2.frameLog
 import mOkhttp3.internal.readMedium
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString
-import okio.Source
-import okio.Timeout
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString
+import mOkio.Source
+import mOkio.Timeout
 
 /**
  * Reads HTTP/2 transport frames.

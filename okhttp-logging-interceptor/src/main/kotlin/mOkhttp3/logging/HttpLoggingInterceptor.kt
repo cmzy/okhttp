@@ -26,8 +26,8 @@ import mOkhttp3.OkHttpClient
 import mOkhttp3.Response
 import mOkhttp3.internal.http.promisesBody
 import mOkhttp3.internal.platform.Platform
-import okio.Buffer
-import okio.GzipSource
+import mOkio.Buffer
+import mOkio.GzipSource
 
 /**
  * An OkHttp interceptor which logs request and response information. Can be applied as an

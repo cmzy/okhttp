@@ -30,12 +30,12 @@ import mOkhttp3.tls.internal.der.ObjectIdentifiers.organizationalUnitName
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.rsaEncryption
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.sha256WithRSAEncryption
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.subjectAlternativeName
-import okio.Buffer
-import okio.ByteString
-import okio.ByteString.Companion.decodeBase64
-import okio.ByteString.Companion.decodeHex
-import okio.ByteString.Companion.encodeUtf8
-import okio.ByteString.Companion.toByteString
+import mOkio.Buffer
+import mOkio.ByteString
+import mOkio.ByteString.Companion.decodeBase64
+import mOkio.ByteString.Companion.decodeHex
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString.Companion.toByteString
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 

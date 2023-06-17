@@ -17,7 +17,7 @@ package mOkhttp3.tls.internal.der
 
 import java.math.BigInteger
 import java.net.ProtocolException
-import okio.ByteString
+import mOkio.ByteString
 
 /**
  * ASN.1 adapters adapted from the specifications in [RFC 5280][rfc_5280].

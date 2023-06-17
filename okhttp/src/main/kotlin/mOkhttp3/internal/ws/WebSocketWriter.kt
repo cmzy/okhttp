@@ -30,9 +30,9 @@ import mOkhttp3.internal.ws.WebSocketProtocol.PAYLOAD_SHORT
 import mOkhttp3.internal.ws.WebSocketProtocol.PAYLOAD_SHORT_MAX
 import mOkhttp3.internal.ws.WebSocketProtocol.toggleMask
 import mOkhttp3.internal.ws.WebSocketProtocol.validateCloseCode
-import okio.Buffer
-import okio.BufferedSink
-import okio.ByteString
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.ByteString
 
 /**
  * An [RFC 6455][rfc_6455]-compatible WebSocket frame writer.

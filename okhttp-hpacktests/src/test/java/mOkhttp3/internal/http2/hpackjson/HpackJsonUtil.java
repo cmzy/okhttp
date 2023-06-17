@@ -25,7 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import okio.Okio;
+import mOkio.Okio;
 
 import static java.util.Arrays.asList;
 import static mOkhttp3.internal.http2.hpackjson.Story.MISSING;

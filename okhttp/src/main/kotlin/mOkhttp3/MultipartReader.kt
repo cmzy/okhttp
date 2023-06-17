@@ -19,13 +19,13 @@ import java.io.Closeable
 import java.io.IOException
 import java.net.ProtocolException
 import mOkhttp3.internal.http1.HeadersReader
-import okio.Buffer
-import okio.BufferedSource
-import okio.ByteString.Companion.encodeUtf8
-import okio.Options
-import okio.Source
-import okio.Timeout
-import okio.buffer
+import mOkio.Buffer
+import mOkio.BufferedSource
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.Options
+import mOkio.Source
+import mOkio.Timeout
+import mOkio.buffer
 
 /**
  * Reads a stream of [RFC 2046][rfc_2046] multipart body parts. Callers read parts one-at-a-time

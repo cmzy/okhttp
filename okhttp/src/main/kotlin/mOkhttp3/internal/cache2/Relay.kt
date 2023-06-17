@@ -20,11 +20,11 @@ import java.io.IOException
 import java.io.RandomAccessFile
 import mOkhttp3.internal.closeQuietly
 import mOkhttp3.internal.notifyAll
-import okio.Buffer
-import okio.ByteString
-import okio.ByteString.Companion.encodeUtf8
-import okio.Source
-import okio.Timeout
+import mOkio.Buffer
+import mOkio.ByteString
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.Source
+import mOkio.Timeout
 
 /**
  * Replicates a single upstream source into multiple downstream sources. Each downstream source

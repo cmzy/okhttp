@@ -27,10 +27,10 @@ import mOkhttp3.tls.internal.der.ObjectIdentifiers.basicConstraints
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.commonName
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.sha256WithRSAEncryption
 import mOkhttp3.tls.internal.der.ObjectIdentifiers.subjectAlternativeName
-import okio.Buffer
-import okio.ByteString.Companion.decodeHex
-import okio.ByteString.Companion.encodeUtf8
-import okio.ByteString.Companion.toByteString
+import mOkio.Buffer
+import mOkio.ByteString.Companion.decodeHex
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.ByteString.Companion.toByteString
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.fail
 import org.junit.Ignore

@@ -27,7 +27,7 @@ import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
 import mOkhttp3.WebSocketListener;
-import okio.ByteString;
+import mOkio.ByteString;
 
 /**
  * API access to the <a href="https://api.slack.com/apps">Slack API</a> as an application. One
@@ -86,7 +86,9 @@ public final class SlackApi {
     Call call = httpClient.newCall(request);
     try (Response response = call.execute()) {
       JsonAdapter<OAuthSession> jsonAdapter = moshi.adapter(OAuthSession.class);
-      return jsonAdapter.fromJson(response.body().source());
+      mOkio.BufferedSource source = response.body().source();
+      okio.Source sourceOkio = okio.Okio.source(source.inputStream());
+      return jsonAdapter.fromJson(okio.Okio.buffer(sourceOkio));
     }
   }
 
@@ -101,7 +103,9 @@ public final class SlackApi {
     Call call = httpClient.newCall(request);
     try (Response response = call.execute()) {
       JsonAdapter<RtmStartResponse> jsonAdapter = moshi.adapter(RtmStartResponse.class);
-      return jsonAdapter.fromJson(response.body().source());
+      mOkio.BufferedSource source = response.body().source();
+      okio.Source sourceOkio = okio.Okio.source(source.inputStream());
+      return jsonAdapter.fromJson(okio.Okio.buffer(sourceOkio));
     }
   }
 

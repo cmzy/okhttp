@@ -19,7 +19,7 @@ import mOkhttp3.CertificatePinner.Builder
 import mOkhttp3.CertificatePinner.Companion.sha1Hash
 import mOkhttp3.CertificatePinner.Pin
 import mOkhttp3.tls.HeldCertificate
-import okio.ByteString.Companion.decodeBase64
+import mOkio.ByteString.Companion.decodeBase64
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse

@@ -32,10 +32,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.logging.Logger;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.Okio;
 
 import static mOkhttp3.internal.Util.closeQuietly;
 

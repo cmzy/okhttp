@@ -1,5 +1,5 @@
 dependencies {
-  testImplementation deps.okio
+  testImplementation files("../libs/okio-jvm-2.8.0.jar")
   testImplementation deps.moshi
   testImplementation project(':okhttp')
   testImplementation project(':okhttp-testing-support')

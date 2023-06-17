@@ -19,9 +19,9 @@ import mOkhttp3.Interceptor
 import mOkhttp3.Response
 import mOkhttp3.ResponseBody.Companion.asResponseBody
 import mOkhttp3.internal.http.promisesBody
-import okio.GzipSource
-import okio.buffer
-import okio.source
+import mOkio.GzipSource
+import mOkio.buffer
+import mOkio.source
 import org.brotli.dec.BrotliInputStream
 
 /**

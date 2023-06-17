@@ -17,8 +17,8 @@ package mOkhttp3.internal.http2;
 
 import java.io.IOException;
 import java.util.Random;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

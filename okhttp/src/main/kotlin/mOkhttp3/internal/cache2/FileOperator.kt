@@ -17,7 +17,7 @@ package mOkhttp3.internal.cache2
 
 import java.io.IOException
 import java.nio.channels.FileChannel
-import okio.Buffer
+import mOkio.Buffer
 
 /**
  * Read and write a target file. Unlike Okio's built-in `Okio.source(java.io.File file)` and `Okio.sink(java.io.File file)`

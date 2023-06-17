@@ -15,7 +15,7 @@
  */
 package mOkhttp3
 
-import okio.ByteString
+import mOkio.ByteString
 
 /**
  * A non-blocking interface to a web socket. Use the [factory][WebSocket.Factory] to create

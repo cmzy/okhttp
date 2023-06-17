@@ -21,8 +21,8 @@ import java.util.LinkedHashMap;
 import java.util.Locale;
 import java.util.Map;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 
 import static org.junit.Assert.fail;
 

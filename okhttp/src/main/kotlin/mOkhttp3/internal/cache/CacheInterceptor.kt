@@ -34,9 +34,9 @@ import mOkhttp3.internal.http.ExchangeCodec
 import mOkhttp3.internal.http.HttpMethod
 import mOkhttp3.internal.http.RealResponseBody
 import mOkhttp3.internal.http.promisesBody
-import okio.Buffer
-import okio.Source
-import okio.buffer
+import mOkio.Buffer
+import mOkio.Source
+import mOkio.buffer
 
 /** Serves requests from the cache and writes responses to the cache. */
 class CacheInterceptor(internal val cache: Cache?) : Interceptor {

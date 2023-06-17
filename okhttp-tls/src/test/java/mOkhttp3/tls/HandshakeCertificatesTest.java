@@ -34,7 +34,7 @@ import javax.net.SocketFactory;
 import javax.net.ssl.SSLSocket;
 import mOkhttp3.Handshake;
 import mOkhttp3.testing.PlatformRule;
-import okio.ByteString;
+import mOkio.ByteString;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;

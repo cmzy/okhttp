@@ -39,7 +39,7 @@ import mOkhttp3.internal.SuppressSignatureCheck
 import mOkhttp3.recipes.kt.WireSharkListenerFactory.WireSharkKeyLoggerListener.Launch
 import mOkhttp3.recipes.kt.WireSharkListenerFactory.WireSharkKeyLoggerListener.Launch.CommandLine
 import mOkhttp3.recipes.kt.WireSharkListenerFactory.WireSharkKeyLoggerListener.Launch.Gui
-import okio.ByteString.Companion.toByteString
+import mOkio.ByteString.Companion.toByteString
 
 /**
  * Logs SSL keys to a log file, allowing Wireshark to decode traffic and be examined with http2

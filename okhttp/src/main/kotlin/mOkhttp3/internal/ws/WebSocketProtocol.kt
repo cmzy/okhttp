@@ -15,8 +15,8 @@
  */
 package mOkhttp3.internal.ws
 
-import okio.Buffer
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.Buffer
+import mOkio.ByteString.Companion.encodeUtf8
 
 object WebSocketProtocol {
   /** Magic value which must be appended to the key in a response header. */

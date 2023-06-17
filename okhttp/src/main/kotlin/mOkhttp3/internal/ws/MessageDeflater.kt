@@ -18,10 +18,10 @@ package mOkhttp3.internal.ws
 import java.io.Closeable
 import java.io.IOException
 import java.util.zip.Deflater
-import okio.Buffer
-import okio.ByteString
-import okio.ByteString.Companion.decodeHex
-import okio.DeflaterSink
+import mOkio.Buffer
+import mOkio.ByteString
+import mOkio.ByteString.Companion.decodeHex
+import mOkio.DeflaterSink
 
 private val EMPTY_DEFLATE_BLOCK = "000000ffff".decodeHex()
 private const val LAST_OCTETS_COUNT_TO_REMOVE_AFTER_DEFLATION = 4

@@ -31,8 +31,8 @@ import mOkhttp3.internal.headersContentLength
 import mOkhttp3.internal.http.StatusLine.Companion.HTTP_CONTINUE
 import mOkhttp3.internal.platform.Platform
 import mOkhttp3.internal.skipAll
-import okio.Buffer
-import okio.ByteString.Companion.encodeUtf8
+import mOkio.Buffer
+import mOkio.ByteString.Companion.encodeUtf8
 
 private val QUOTED_STRING_DELIMITERS = "\"\\".encodeUtf8()
 private val TOKEN_DELIMITERS = "\t ,=".encodeUtf8()

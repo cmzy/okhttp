@@ -38,7 +38,7 @@ import mOkhttp3.internal.tls.BasicCertificateChainCleaner
 import mOkhttp3.internal.tls.BasicTrustRootIndex
 import mOkhttp3.internal.tls.CertificateChainCleaner
 import mOkhttp3.internal.tls.TrustRootIndex
-import okio.Buffer
+import mOkio.Buffer
 
 /**
  * Access to platform-specific features.

@@ -17,7 +17,7 @@ package mOkhttp3.internal.http2
 
 import java.io.IOException
 import mOkhttp3.Protocol
-import okio.BufferedSource
+import mOkio.BufferedSource
 
 /**
  * [HTTP/2][Protocol.HTTP_2] only. Processes server-initiated HTTP requests on the client.

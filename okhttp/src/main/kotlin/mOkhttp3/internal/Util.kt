@@ -49,12 +49,12 @@ import mOkhttp3.Response
 import mOkhttp3.ResponseBody.Companion.toResponseBody
 import mOkhttp3.internal.http2.Header
 import mOkhttp3.internal.io.FileSystem
-import okio.Buffer
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ByteString.Companion.decodeHex
-import okio.Options
-import okio.Source
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ByteString.Companion.decodeHex
+import mOkio.Options
+import mOkio.Source
 
 @JvmField
 val EMPTY_BYTE_ARRAY = ByteArray(0)

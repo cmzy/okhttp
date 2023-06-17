@@ -19,7 +19,7 @@ import java.net.IDN
 import java.net.InetAddress
 import java.util.Arrays
 import java.util.Locale
-import okio.Buffer
+import mOkio.Buffer
 
 /**
  * If this is an IP address, this returns the IP address in canonical form.

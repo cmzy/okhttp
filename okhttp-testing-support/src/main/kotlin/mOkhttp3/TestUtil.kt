@@ -21,7 +21,7 @@ import java.net.InetSocketAddress
 import java.net.UnknownHostException
 import java.util.Arrays
 import mOkhttp3.internal.http2.Header
-import okio.Buffer
+import mOkio.Buffer
 import org.junit.Assume.assumeFalse
 import org.junit.Assume.assumeNoException
 

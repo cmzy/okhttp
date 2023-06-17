@@ -46,7 +46,7 @@ import mOkhttp3.internal.http.RealInterceptorChain
 import mOkhttp3.internal.http.RetryAndFollowUpInterceptor
 import mOkhttp3.internal.platform.Platform
 import mOkhttp3.internal.threadName
-import okio.AsyncTimeout
+import mOkio.AsyncTimeout
 
 /**
  * Bridge between OkHttp's application and network layers. This class exposes high-level application

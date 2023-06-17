@@ -22,8 +22,8 @@ import mOkhttp3.HttpUrl.Companion.canonicalize
 import mOkhttp3.HttpUrl.Companion.percentDecode
 import mOkhttp3.MediaType.Companion.toMediaType
 import mOkhttp3.internal.toImmutableList
-import okio.Buffer
-import okio.BufferedSink
+import mOkio.Buffer
+import mOkio.BufferedSink
 
 class FormBody internal constructor(
   encodedNames: List<String>,

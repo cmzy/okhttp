@@ -44,7 +44,7 @@ import mOkhttp3.mockwebserver.SocketPolicy
 import mOkhttp3.tls.HandshakeCertificates
 import mOkhttp3.tls.HeldCertificate
 import mOkhttp3.tls.internal.TlsUtil.localhost
-import okio.Buffer
+import mOkio.Buffer
 import org.junit.Ignore
 import org.junit.Test
 

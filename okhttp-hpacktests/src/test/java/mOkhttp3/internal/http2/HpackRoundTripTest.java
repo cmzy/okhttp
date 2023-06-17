@@ -18,7 +18,7 @@ package mOkhttp3.internal.http2;
 import java.util.Collection;
 import mOkhttp3.internal.http2.hpackjson.Case;
 import mOkhttp3.internal.http2.hpackjson.Story;
-import okio.Buffer;
+import mOkio.Buffer;
 import org.junit.Assume;
 import org.junit.Test;
 import org.junit.runner.RunWith;

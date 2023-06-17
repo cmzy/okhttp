@@ -82,15 +82,15 @@ import mOkhttp3.mockwebserver.SocketPolicy.SHUTDOWN_SERVER_AFTER_RESPONSE
 import mOkhttp3.mockwebserver.SocketPolicy.STALL_SOCKET_AT_START
 import mOkhttp3.mockwebserver.SocketPolicy.UPGRADE_TO_SSL_AT_END
 import mOkhttp3.mockwebserver.internal.duplex.DuplexResponseBody
-import okio.Buffer
-import okio.BufferedSink
-import okio.BufferedSource
-import okio.ByteString.Companion.encodeUtf8
-import okio.Sink
-import okio.Timeout
-import okio.buffer
-import okio.sink
-import okio.source
+import mOkio.Buffer
+import mOkio.BufferedSink
+import mOkio.BufferedSource
+import mOkio.ByteString.Companion.encodeUtf8
+import mOkio.Sink
+import mOkio.Timeout
+import mOkio.buffer
+import mOkio.sink
+import mOkio.source
 import org.junit.rules.ExternalResource
 
 /**

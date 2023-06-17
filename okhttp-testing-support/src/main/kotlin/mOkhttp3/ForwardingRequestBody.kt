@@ -16,7 +16,7 @@
 package mOkhttp3
 
 import java.io.IOException
-import okio.BufferedSink
+import mOkio.BufferedSink
 
 open class ForwardingRequestBody(delegate: RequestBody?) : RequestBody() {
   private val delegate: RequestBody
