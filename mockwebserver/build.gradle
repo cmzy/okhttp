@@ -7,11 +7,11 @@ jar {
 }
 
 dependencies {
-  api project(':okhttp')
+  api project(':mOkhttp')
   api deps.junit
 
-  testImplementation project(':okhttp-testing-support')
-  testImplementation project(':okhttp-tls')
+  testImplementation project(':mOkhttp-testing-support')
+  testImplementation project(':mOkhttp-tls')
   testImplementation deps.assertj
 }
 
@@ -22,6 +22,7 @@ afterEvaluate { project ->
   }
 }
 
+/*
 task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   oldClasspath = files(baselineJar(project, baselineVersion))
   newClasspath = files(jar.archivePath)
@@ -36,3 +37,4 @@ task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   ]
 }
 check.dependsOn(japicmp)
+*/

@@ -22,12 +22,12 @@ task copyResourcesTemplates(type: Copy) {
 }
 
 dependencies {
-  api project(':okhttp')
-  api project(':okhttp-logging-interceptor')
+  api project(':mOkhttp')
+  api project(':mOkhttp-logging-interceptor')
   implementation deps.picocli
   implementation deps.guava
 
-  testImplementation project(':okhttp-testing-support')
+  testImplementation project(':mOkhttp-testing-support')
   testImplementation deps.junit
   testImplementation deps.assertj
 }

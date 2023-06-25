@@ -1,5 +1,5 @@
 dependencies {
-  api project(':okhttp')
+  api project(':mOkhttp')
   api deps.junit
   api deps.assertj
   api deps.bouncycastle

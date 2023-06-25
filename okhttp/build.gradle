@@ -32,11 +32,11 @@ dependencies {
   compileOnly deps.jsr305
   compileOnly deps.animalSniffer
 
-  testImplementation project(':okhttp-testing-support')
-  testImplementation project(':okhttp-tls')
-  testImplementation project(':okhttp-urlconnection')
+  testImplementation project(':mOkhttp-testing-support')
+  testImplementation project(':mOkhttp-tls')
+  testImplementation project(':mOkhttp-urlconnection')
   testImplementation project(':mockwebserver')
-  testImplementation project(':okhttp-logging-interceptor')
+  testImplementation project(':mOkhttp-logging-interceptor')
   testImplementation deps.conscrypt
   testImplementation deps.junit
   testImplementation deps.assertj
@@ -51,6 +51,7 @@ afterEvaluate { project ->
   }
 }
 
+/*
 task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   oldClasspath = files(baselineJar(project, baselineVersion))
   newClasspath = files(jar.archivePath)
@@ -113,3 +114,4 @@ task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   ]
 }
 check.dependsOn(japicmp)
+ */

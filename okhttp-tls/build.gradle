@@ -8,11 +8,11 @@ jar {
 
 dependencies {
   api files("../libs/okio-jvm-2.8.0.jar")
-  implementation project(':okhttp')
+  implementation project(':mOkhttp')
   compileOnly deps.jsr305
   compileOnly deps.animalSniffer
 
-  testImplementation project(':okhttp-testing-support')
+  testImplementation project(':mOkhttp-testing-support')
   testImplementation deps.junit
   testImplementation deps.assertj
 }
@@ -24,6 +24,7 @@ afterEvaluate { project ->
   }
 }
 
+/*
 task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   oldClasspath = files(baselineJar(project, baselineVersion))
   newClasspath = files(jar.archivePath)
@@ -37,3 +38,4 @@ task japicmp(type: me.champeau.gradle.japicmp.JapicmpTask, dependsOn: 'jar') {
   ]
 }
 check.dependsOn(japicmp)
+ */

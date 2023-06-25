@@ -9,16 +9,38 @@ if (properties.containsKey('android.injected.invoked.from.ide') ||
 }
 
 include ':okcurl'
+project(':okcurl').name='mOkcurl'
+
 include ':okhttp'
+project(':okhttp').name='mOkhttp'
+
 include ':okhttp-bom'
+project(':okhttp-bom').name='mOkhttp-bom'
+
 include ':okhttp-brotli'
+project(':okhttp-brotli').name='mOkhttp-brotli'
+
 include ':okhttp-dnsoverhttps'
+project(':okhttp-dnsoverhttps').name='mOkhttp-dnsoverhttps'
+
 include ':okhttp-hpacktests'
+project(':okhttp-hpacktests').name='mOkhttp-hpacktests'
+
 include ':okhttp-logging-interceptor'
+project(':okhttp-logging-interceptor').name='mOkhttp-logging-interceptor'
+
 include ':okhttp-sse'
+project(':okhttp-sse').name='mOkhttp-sse'
+
 include ':okhttp-testing-support'
+project(':okhttp-testing-support').name='mOkhttp-testing-support'
+
 include ':okhttp-tls'
+project(':okhttp-tls').name='mOkhttp-tls'
+
 include ':okhttp-urlconnection'
+project(':okhttp-urlconnection').name='mOkhttp-urlconnection'
+
 include ':samples:compare'
 include ':samples:crawler'
 include ':samples:guide'

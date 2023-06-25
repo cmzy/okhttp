@@ -87,7 +87,7 @@ ext.publishedArtifactId = { project ->
 }
 
 allprojects {
-  group = 'com.squareup.okhttp3'
+  group = 'com.squareup.mOkhttp3'
   project.ext.artifactId = rootProject.ext.publishedArtifactId(project)
   version = '4.9.3'
 
@@ -357,6 +357,7 @@ def alpnBootVersionForPatchVersion(String javaVersion, int patchVersion) {
  * Returns a .jar file for the golden version of this project.
  * https://github.com/Visistema/Groovy1/blob/ba5eb9b2f19ca0cc8927359ce414c4e1974b7016/gradle/binarycompatibility.gradle#L48
  */
+/*
 ext.baselineJar = { project, version ->
   def group = project.group
   def artifactId = project.ext.artifactId
@@ -369,5 +370,5 @@ ext.baselineJar = { project, version ->
   } finally {
     project.group = group
   }
-}
+}*/
 ext.baselineVersion = "3.14.1"

@@ -1,9 +1,9 @@
 dependencies {
-  implementation project(':okhttp')
+  implementation project(':mOkhttp')
   implementation project(':mockwebserver')
-  implementation project(':okhttp-tls')
+  implementation project(':mOkhttp-tls')
 
-  testImplementation project(':okhttp-testing-support')
+  testImplementation project(':mOkhttp-testing-support')
   testImplementation 'org.apache.httpcomponents.client5:httpclient5:5.0'
   testImplementation 'org.eclipse.jetty:jetty-client:9.4.27.v20200227'
   testImplementation deps.junit

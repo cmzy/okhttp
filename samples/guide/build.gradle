@@ -1,9 +1,9 @@
 apply plugin: 'kotlin-kapt'
 
 dependencies {
-  implementation project(':okhttp')
+  implementation project(':mOkhttp')
   implementation project(':mockwebserver')
-  implementation project(':okhttp-tls')
+  implementation project(':mOkhttp-tls')
   implementation deps.animalSniffer
   implementation deps.moshi
   kapt deps.moshiKotlin
