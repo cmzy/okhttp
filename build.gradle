@@ -72,14 +72,14 @@ ext.publishedArtifactId = { project ->
   if (project.name == 'okhttp-logging-interceptor') {
     return 'logging-interceptor'
   } else if (project.name == 'mockwebserver'
-          || project.name == 'okcurl'
-          || project.name == 'okhttp'
-          || project.name == 'okhttp-bom'
-          || project.name == 'okhttp-brotli'
-          || project.name == 'okhttp-dnsoverhttps'
-          || project.name == 'okhttp-sse'
-          || project.name == 'okhttp-tls'
-          || project.name == 'okhttp-urlconnection') {
+          || project.name == 'mOkcurl'
+          || project.name == 'mOkhttp'
+          || project.name == 'mOkhttp-bom'
+          || project.name == 'mOkhttp-brotli'
+          || project.name == 'mOkhttp-dnsoverhttps'
+          || project.name == 'mOkhttp-sse'
+          || project.name == 'mOkhttp-tls'
+          || project.name == 'mOkhttp-urlconnection') {
     return project.name
   } else {
     return null // Not published.
