@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.squareup.okhttp3.sample</groupId>
+    <groupId>com.squareup.mOkhttp3.sample</groupId>
     <artifactId>sample-parent</artifactId>
     <version>3.14.9</version>
   </parent>
@@ -14,12 +14,12 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.squareup.okhttp3</groupId>
+      <groupId>com.squareup.mOkhttp3</groupId>
       <artifactId>okhttp</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.squareup.okhttp3</groupId>
+      <groupId>com.squareup.mOkhttp3</groupId>
       <artifactId>mockwebserver</artifactId>
       <version>${project.version}</version>
     </dependency>

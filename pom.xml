@@ -9,7 +9,7 @@
     <version>7</version>
   </parent>
 
-  <groupId>com.squareup.okhttp3</groupId>
+  <groupId>com.squareup.mOkhttp3</groupId>
   <artifactId>parent</artifactId>
   <version>3.14.9</version>
   <packaging>pom</packaging>
