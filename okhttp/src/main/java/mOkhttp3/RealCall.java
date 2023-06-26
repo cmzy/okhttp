@@ -31,7 +31,7 @@ import mOkhttp3.internal.http.CallServerInterceptor;
 import mOkhttp3.internal.http.RealInterceptorChain;
 import mOkhttp3.internal.http.RetryAndFollowUpInterceptor;
 import mOkhttp3.internal.platform.Platform;
-import okio.Timeout;
+import mOkio.Timeout;
 
 import static mOkhttp3.internal.Util.closeQuietly;
 import static mOkhttp3.internal.platform.Platform.INFO;

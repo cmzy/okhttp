@@ -34,8 +34,8 @@ import mOkhttp3.internal.http.ExchangeCodec;
 import mOkhttp3.internal.http.HttpHeaders;
 import mOkhttp3.internal.http.RequestLine;
 import mOkhttp3.internal.http.StatusLine;
-import okio.Sink;
-import okio.Source;
+import mOkio.Sink;
+import mOkio.Source;
 
 import static mOkhttp3.internal.http.StatusLine.HTTP_CONTINUE;
 import static mOkhttp3.internal.http2.Header.RESPONSE_STATUS_UTF8;

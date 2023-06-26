@@ -25,12 +25,12 @@ import java.util.List;
 import javax.annotation.Nullable;
 import mOkhttp3.Headers;
 import mOkhttp3.internal.Util;
-import okio.AsyncTimeout;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.Sink;
-import okio.Source;
-import okio.Timeout;
+import mOkio.AsyncTimeout;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.Sink;
+import mOkio.Source;
+import mOkio.Timeout;
 
 /** A logical bidirectional stream. */
 public final class Http2Stream {

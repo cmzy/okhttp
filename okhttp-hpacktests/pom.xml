@@ -14,7 +14,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.squareup.okio</groupId>
+      <groupId>com.squareup.mOkio</groupId>
       <artifactId>okio</artifactId>
     </dependency>
     <dependency>

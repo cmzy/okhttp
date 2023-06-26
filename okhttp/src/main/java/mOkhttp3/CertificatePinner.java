@@ -27,7 +27,7 @@ import java.util.Set;
 import javax.annotation.Nullable;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import mOkhttp3.internal.tls.CertificateChainCleaner;
-import okio.ByteString;
+import mOkio.ByteString;
 
 /**
  * Constrains which certificates are trusted. Pinning certificates defends against attacks on

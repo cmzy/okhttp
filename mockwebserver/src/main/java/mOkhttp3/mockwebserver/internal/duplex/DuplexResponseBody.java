@@ -17,8 +17,8 @@ package mOkhttp3.mockwebserver.internal.duplex;
 
 import java.io.IOException;
 import mOkhttp3.mockwebserver.RecordedRequest;
-import okio.BufferedSink;
-import okio.BufferedSource;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
 
 public interface DuplexResponseBody {
   void onRequest(RecordedRequest request, BufferedSource requestBody, BufferedSink responseBody)

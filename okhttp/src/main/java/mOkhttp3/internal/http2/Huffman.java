@@ -17,8 +17,8 @@ package mOkhttp3.internal.http2;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import okio.BufferedSink;
-import okio.ByteString;
+import mOkio.BufferedSink;
+import mOkio.ByteString;
 
 /**
  * This class was originally composed from the following classes in <a

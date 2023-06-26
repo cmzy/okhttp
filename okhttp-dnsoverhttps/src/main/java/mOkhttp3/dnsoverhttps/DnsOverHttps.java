@@ -38,7 +38,7 @@ import mOkhttp3.ResponseBody;
 import mOkhttp3.internal.Util;
 import mOkhttp3.internal.platform.Platform;
 import mOkhttp3.internal.publicsuffix.PublicSuffixDatabase;
-import okio.ByteString;
+import mOkio.ByteString;
 
 /**
  * DNS over HTTPS implementation.

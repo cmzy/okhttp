@@ -23,11 +23,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Okio;
-import okio.Source;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.Okio;
+import mOkio.Source;
 
 /**
  * Read and write HPACK v10.

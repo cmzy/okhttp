@@ -21,9 +21,9 @@ import java.util.List;
 import java.util.UUID;
 import javax.annotation.Nullable;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.BufferedSink;
+import mOkio.ByteString;
 
 /** An <a href="http://www.ietf.org/rfc/rfc2387.txt">RFC 2387</a>-compliant request body. */
 public final class MultipartBody extends RequestBody {

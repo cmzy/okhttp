@@ -18,7 +18,7 @@ package mOkhttp3.slack;
 import java.io.IOException;
 import java.io.InterruptedIOException;
 import mOkhttp3.HttpUrl;
-import okio.Timeout;
+import mOkio.Timeout;
 
 /** A connection to Slack as a single user. */
 public final class SlackClient {

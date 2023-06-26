@@ -21,8 +21,8 @@ import java.net.ProtocolException;
 import java.util.Random;
 import java.util.regex.Pattern;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 import org.junit.After;
 import org.junit.Test;
 

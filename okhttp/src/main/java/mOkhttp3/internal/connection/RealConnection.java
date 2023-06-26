@@ -63,9 +63,9 @@ import mOkhttp3.internal.http2.StreamResetException;
 import mOkhttp3.internal.platform.Platform;
 import mOkhttp3.internal.tls.OkHostnameVerifier;
 import mOkhttp3.internal.ws.RealWebSocket;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.Okio;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
+import mOkio.Okio;
 
 import static java.net.HttpURLConnection.HTTP_OK;
 import static java.net.HttpURLConnection.HTTP_PROXY_AUTH;

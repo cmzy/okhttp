@@ -27,8 +27,8 @@ import mOkhttp3.Request;
 import mOkhttp3.RequestBody;
 import mOkhttp3.Response;
 import mOkhttp3.internal.Version;
-import okio.GzipSource;
-import okio.Okio;
+import mOkio.GzipSource;
+import mOkio.Okio;
 
 import static mOkhttp3.internal.Util.hostHeader;
 

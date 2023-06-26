@@ -20,11 +20,11 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.concurrent.atomic.AtomicBoolean;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.ForwardingSource;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.ForwardingSource;
+import mOkio.Okio;
 import org.junit.Test;
 
 import static java.nio.charset.StandardCharsets.UTF_8;

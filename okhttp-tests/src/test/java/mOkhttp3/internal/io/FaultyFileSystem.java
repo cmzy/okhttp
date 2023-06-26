@@ -20,10 +20,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import okio.Buffer;
-import okio.ForwardingSink;
-import okio.Sink;
-import okio.Source;
+import mOkio.Buffer;
+import mOkio.ForwardingSink;
+import mOkio.Sink;
+import mOkio.Source;
 
 public final class FaultyFileSystem implements FileSystem {
   private final FileSystem delegate;

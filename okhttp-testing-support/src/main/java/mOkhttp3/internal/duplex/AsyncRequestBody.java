@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 import javax.annotation.Nullable;
 import mOkhttp3.MediaType;
 import mOkhttp3.RequestBody;
-import okio.BufferedSink;
+import mOkio.BufferedSink;
 
 import static junit.framework.TestCase.assertTrue;
 

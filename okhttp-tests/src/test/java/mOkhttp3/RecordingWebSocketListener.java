@@ -16,7 +16,7 @@
 package mOkhttp3;
 
 import javax.annotation.Nullable;
-import okio.ByteString;
+import mOkio.ByteString;
 
 public final class RecordingWebSocketListener extends WebSocketListener {
   @Override public void onOpen(WebSocket webSocket, Response response) {

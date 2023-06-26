@@ -39,11 +39,11 @@ import mOkhttp3.Headers;
 import mOkhttp3.internal.NamedRunnable;
 import mOkhttp3.internal.Util;
 import mOkhttp3.internal.platform.Platform;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.Okio;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static mOkhttp3.internal.http2.ErrorCode.REFUSED_STREAM;

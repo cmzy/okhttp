@@ -18,8 +18,8 @@ package mOkhttp3.internal.cache2;
 import java.io.EOFException;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
-import okio.Buffer;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.Okio;
 
 /**
  * Read and write a target file. Unlike Okio's built-in {@linkplain Okio#source(java.io.File) file

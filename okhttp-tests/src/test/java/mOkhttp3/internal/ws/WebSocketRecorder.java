@@ -26,7 +26,7 @@ import mOkhttp3.Response;
 import mOkhttp3.WebSocket;
 import mOkhttp3.WebSocketListener;
 import mOkhttp3.internal.platform.Platform;
-import okio.ByteString;
+import mOkio.ByteString;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

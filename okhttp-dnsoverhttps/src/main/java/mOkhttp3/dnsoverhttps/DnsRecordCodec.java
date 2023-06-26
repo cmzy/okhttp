@@ -21,9 +21,9 @@ import java.net.UnknownHostException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
-import okio.Buffer;
-import okio.ByteString;
-import okio.Utf8;
+import mOkio.Buffer;
+import mOkio.ByteString;
+import mOkio.Utf8;
 
 /**
  * Trivial Dns Encoder/Decoder, basically ripped from Netty full implementation.

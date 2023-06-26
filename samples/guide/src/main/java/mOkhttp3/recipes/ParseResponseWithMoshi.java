@@ -22,6 +22,7 @@ import java.util.Map;
 import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
+import mOkio.BufferedSource;
 
 public final class ParseResponseWithMoshi {
   private final OkHttpClient client = new OkHttpClient();
@@ -35,7 +36,10 @@ public final class ParseResponseWithMoshi {
     try (Response response = client.newCall(request).execute()) {
       if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
 
-      Gist gist = gistJsonAdapter.fromJson(response.body().source());
+
+      BufferedSource source = response.body().source();
+      okio.Source sourceOkio = okio.Okio.source(source.inputStream());
+      Gist gist = gistJsonAdapter.fromJson(okio.Okio.buffer(sourceOkio));
 
       for (Map.Entry<String, GistFile> entry : gist.files.entrySet()) {
         System.out.println(entry.getKey());

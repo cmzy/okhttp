@@ -81,7 +81,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.squareup.okio</groupId>
+        <groupId>com.squareup.mOkio</groupId>
         <artifactId>okio</artifactId>
         <version>${okio.version}</version>
       </dependency>

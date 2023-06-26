@@ -17,11 +17,11 @@ package mOkhttp3.internal.ws;
 
 import java.io.IOException;
 import java.util.Random;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.ByteString;
-import okio.Sink;
-import okio.Timeout;
+import mOkio.Buffer;
+import mOkio.BufferedSink;
+import mOkio.ByteString;
+import mOkio.Sink;
+import mOkio.Timeout;
 
 import static mOkhttp3.internal.ws.WebSocketProtocol.B0_FLAG_FIN;
 import static mOkhttp3.internal.ws.WebSocketProtocol.B1_FLAG_MASK;

@@ -22,9 +22,9 @@ import java.net.IDN;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 import mOkhttp3.internal.platform.Platform;
-import okio.BufferedSource;
-import okio.GzipSource;
-import okio.Okio;
+import mOkio.BufferedSource;
+import mOkio.GzipSource;
+import mOkio.Okio;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 

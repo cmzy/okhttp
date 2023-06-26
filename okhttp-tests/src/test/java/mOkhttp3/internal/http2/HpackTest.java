@@ -18,13 +18,13 @@ package mOkhttp3.internal.http2;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 import org.junit.Before;
 import org.junit.Test;
 
 import static mOkhttp3.TestUtil.headerEntries;
-import static okio.ByteString.decodeHex;
+import static mOkio.ByteString.decodeHex;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.fail;
 

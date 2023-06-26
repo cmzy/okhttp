@@ -36,11 +36,11 @@ import javax.annotation.Nullable;
 import mOkhttp3.internal.Util;
 import mOkhttp3.internal.io.FileSystem;
 import mOkhttp3.internal.platform.Platform;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.Okio;
-import okio.Sink;
-import okio.Source;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
+import mOkio.Okio;
+import mOkio.Sink;
+import mOkio.Source;
 
 import static mOkhttp3.internal.platform.Platform.WARN;
 

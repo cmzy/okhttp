@@ -20,12 +20,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import mOkhttp3.internal.Util;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.GzipSink;
-import okio.Okio;
+import mOkio.Buffer;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.GzipSink;
+import mOkio.Okio;
 import org.junit.Test;
 
 import static mOkhttp3.TestUtil.headerEntries;

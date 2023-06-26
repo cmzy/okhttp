@@ -16,7 +16,7 @@
 package mOkhttp3;
 
 import java.nio.charset.Charset;
-import okio.ByteString;
+import mOkio.ByteString;
 
 import static java.nio.charset.StandardCharsets.ISO_8859_1;
 

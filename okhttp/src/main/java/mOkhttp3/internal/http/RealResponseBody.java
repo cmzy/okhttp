@@ -18,7 +18,7 @@ package mOkhttp3.internal.http;
 import javax.annotation.Nullable;
 import mOkhttp3.MediaType;
 import mOkhttp3.ResponseBody;
-import okio.BufferedSource;
+import mOkio.BufferedSource;
 
 public final class RealResponseBody extends ResponseBody {
   /**

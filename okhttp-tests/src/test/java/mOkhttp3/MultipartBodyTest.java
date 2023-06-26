@@ -16,8 +16,8 @@
 package mOkhttp3;
 
 import java.io.IOException;
-import okio.Buffer;
-import okio.BufferedSink;
+import mOkio.Buffer;
+import mOkio.BufferedSink;
 import org.junit.Test;
 
 import static java.nio.charset.StandardCharsets.UTF_8;

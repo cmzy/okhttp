@@ -20,11 +20,11 @@ import java.io.EOFException;
 import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Source;
-import okio.Timeout;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.Source;
+import mOkio.Timeout;
 
 import static java.util.logging.Level.FINE;
 import static mOkhttp3.internal.Util.format;
@@ -48,7 +48,7 @@ import static mOkhttp3.internal.http2.Http2.TYPE_SETTINGS;
 import static mOkhttp3.internal.http2.Http2.TYPE_WINDOW_UPDATE;
 import static mOkhttp3.internal.http2.Http2.frameLog;
 import static mOkhttp3.internal.http2.Http2.ioException;
-import static okio.ByteString.EMPTY;
+import static mOkio.ByteString.EMPTY;
 
 /**
  * Reads HTTP/2 transport frames.

@@ -20,10 +20,10 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import javax.annotation.Nullable;
 import mOkhttp3.internal.Util;
-import okio.BufferedSink;
-import okio.ByteString;
-import okio.Okio;
-import okio.Source;
+import mOkio.BufferedSink;
+import mOkio.ByteString;
+import mOkio.Okio;
+import mOkio.Source;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 

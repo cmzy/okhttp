@@ -6,7 +6,7 @@ import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
 import mOkhttp3.WebSocketListener;
-import okio.ByteString;
+import mOkio.ByteString;
 
 public final class WebSocketEcho extends WebSocketListener {
   private void run() {

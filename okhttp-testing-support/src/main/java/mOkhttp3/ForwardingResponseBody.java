@@ -16,7 +16,7 @@
 package mOkhttp3;
 
 import javax.annotation.Nullable;
-import okio.BufferedSource;
+import mOkio.BufferedSource;
 
 public class ForwardingResponseBody extends ResponseBody {
   private final ResponseBody delegate;

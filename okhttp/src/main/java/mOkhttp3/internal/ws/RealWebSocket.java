@@ -40,10 +40,10 @@ import mOkhttp3.WebSocketListener;
 import mOkhttp3.internal.Internal;
 import mOkhttp3.internal.Util;
 import mOkhttp3.internal.connection.Exchange;
-import okio.BufferedSink;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Okio;
+import mOkio.BufferedSink;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.Okio;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static mOkhttp3.internal.Util.closeQuietly;

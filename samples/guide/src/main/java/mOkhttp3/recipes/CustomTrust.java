@@ -34,7 +34,7 @@ import mOkhttp3.Headers;
 import mOkhttp3.OkHttpClient;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
-import okio.Buffer;
+import mOkio.Buffer;
 
 public final class CustomTrust {
   private final OkHttpClient client;

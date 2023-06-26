@@ -17,7 +17,7 @@ package mOkhttp3;
 
 import java.io.IOException;
 import javax.annotation.Nullable;
-import okio.BufferedSink;
+import mOkio.BufferedSink;
 
 public class ForwardingRequestBody extends RequestBody {
   private final RequestBody delegate;

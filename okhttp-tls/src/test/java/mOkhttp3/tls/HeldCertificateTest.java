@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import okio.ByteString;
+import mOkio.ByteString;
 import org.bouncycastle.asn1.x509.GeneralName;
 import org.junit.Test;
 

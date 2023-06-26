@@ -33,9 +33,9 @@ import mOkhttp3.Response;
 import mOkhttp3.ResponseBody;
 import mOkhttp3.internal.http.HttpHeaders;
 import mOkhttp3.internal.platform.Platform;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.GzipSource;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.GzipSource;
 
 import static mOkhttp3.internal.platform.Platform.INFO;
 

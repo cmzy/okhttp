@@ -29,7 +29,7 @@ import java.util.Set;
 import javax.annotation.Nullable;
 import mOkhttp3.internal.Util;
 import mOkhttp3.internal.publicsuffix.PublicSuffixDatabase;
-import okio.Buffer;
+import mOkio.Buffer;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static mOkhttp3.internal.Util.decodeHexDigit;

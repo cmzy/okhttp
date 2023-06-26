@@ -21,8 +21,8 @@ import mOkhttp3.Headers;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
 import mOkhttp3.internal.connection.RealConnection;
-import okio.Sink;
-import okio.Source;
+import mOkio.Sink;
+import mOkio.Source;
 
 /** Encodes HTTP requests and decodes HTTP responses. */
 public interface ExchangeCodec {

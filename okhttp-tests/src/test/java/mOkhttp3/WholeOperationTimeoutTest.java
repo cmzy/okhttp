@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import mOkhttp3.mockwebserver.MockResponse;
 import mOkhttp3.mockwebserver.MockWebServer;
-import okio.BufferedSink;
+import mOkio.BufferedSink;
 import org.junit.Rule;
 import org.junit.Test;
 

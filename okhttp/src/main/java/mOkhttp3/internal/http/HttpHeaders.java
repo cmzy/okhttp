@@ -32,8 +32,8 @@ import mOkhttp3.Headers;
 import mOkhttp3.HttpUrl;
 import mOkhttp3.Request;
 import mOkhttp3.Response;
-import okio.Buffer;
-import okio.ByteString;
+import mOkio.Buffer;
+import mOkio.ByteString;
 
 import static java.net.HttpURLConnection.HTTP_NOT_MODIFIED;
 import static java.net.HttpURLConnection.HTTP_NO_CONTENT;

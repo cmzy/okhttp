@@ -22,8 +22,8 @@ import java.util.List;
 import javax.annotation.Nullable;
 import mOkhttp3.internal.connection.Exchange;
 import mOkhttp3.internal.http.HttpHeaders;
-import okio.Buffer;
-import okio.BufferedSource;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
 
 import static java.net.HttpURLConnection.HTTP_MOVED_PERM;
 import static java.net.HttpURLConnection.HTTP_MOVED_TEMP;

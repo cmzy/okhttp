@@ -22,8 +22,8 @@ import mOkhttp3.Request;
 import mOkhttp3.Response;
 import mOkhttp3.internal.Util;
 import mOkhttp3.internal.connection.Exchange;
-import okio.BufferedSink;
-import okio.Okio;
+import mOkio.BufferedSink;
+import mOkio.Okio;
 
 /** This is the last interceptor in the chain. It makes a network call to the server. */
 public final class CallServerInterceptor implements Interceptor {

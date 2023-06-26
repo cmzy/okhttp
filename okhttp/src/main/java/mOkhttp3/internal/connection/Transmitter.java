@@ -35,8 +35,8 @@ import mOkhttp3.Request;
 import mOkhttp3.internal.Internal;
 import mOkhttp3.internal.http.ExchangeCodec;
 import mOkhttp3.internal.platform.Platform;
-import okio.AsyncTimeout;
-import okio.Timeout;
+import mOkio.AsyncTimeout;
+import mOkio.Timeout;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static mOkhttp3.internal.Util.closeQuietly;

@@ -16,7 +16,7 @@
 package mOkhttp3;
 
 import javax.annotation.Nullable;
-import okio.ByteString;
+import mOkio.ByteString;
 
 /**
  * A non-blocking interface to a web socket. Use the {@linkplain WebSocket.Factory factory} to

@@ -33,7 +33,9 @@ public class OkHttpContributors {
     try (Response response = client.newCall(request).execute()) {
       // Deserialize HTTP response to concrete type.
       ResponseBody body = response.body();
-      List<Contributor> contributors = CONTRIBUTORS_JSON_ADAPTER.fromJson(body.source());
+      mOkio.BufferedSource source = response.body().source();
+      okio.Source sourceOkio = okio.Okio.source(source.inputStream());
+      List<Contributor> contributors = CONTRIBUTORS_JSON_ADAPTER.fromJson(okio.Okio.buffer(sourceOkio));
 
       // Sort list by the most contributions.
       Collections.sort(contributors, (c1, c2) -> c2.contributions - c1.contributions);

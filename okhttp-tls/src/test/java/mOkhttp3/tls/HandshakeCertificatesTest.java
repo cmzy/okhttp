@@ -32,7 +32,7 @@ import javax.net.ServerSocketFactory;
 import javax.net.SocketFactory;
 import javax.net.ssl.SSLSocket;
 import mOkhttp3.Handshake;
-import okio.ByteString;
+import mOkio.ByteString;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

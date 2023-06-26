@@ -50,11 +50,11 @@ import mOkhttp3.HttpUrl;
 import mOkhttp3.RequestBody;
 import mOkhttp3.ResponseBody;
 import mOkhttp3.internal.http2.Header;
-import okio.Buffer;
-import okio.BufferedSource;
-import okio.ByteString;
-import okio.Options;
-import okio.Source;
+import mOkio.Buffer;
+import mOkio.BufferedSource;
+import mOkio.ByteString;
+import mOkio.Options;
+import mOkio.Source;
 
 import static java.nio.charset.StandardCharsets.UTF_16BE;
 import static java.nio.charset.StandardCharsets.UTF_16LE;

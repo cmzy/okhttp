@@ -16,12 +16,12 @@
 package mOkhttp3;
 
 import java.io.IOException;
-import okio.Buffer;
-import okio.BufferedSink;
-import okio.ByteString;
-import okio.ForwardingSink;
-import okio.Okio;
-import okio.Sink;
+import mOkio.Buffer;
+import mOkio.BufferedSink;
+import mOkio.ByteString;
+import mOkio.ForwardingSink;
+import mOkio.Okio;
+import mOkio.Sink;
 
 /** Rewrites the request body sent to the server to be all uppercase. */
 public final class UppercaseRequestInterceptor implements Interceptor {
