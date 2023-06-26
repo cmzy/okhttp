@@ -13,15 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package okhttp3.internal.http2;
+package mOkhttp3.internal.http2;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashSet;
 import java.util.List;
-import okhttp3.internal.http2.hpackjson.Case;
-import okhttp3.internal.http2.hpackjson.HpackJsonUtil;
-import okhttp3.internal.http2.hpackjson.Story;
+import mOkhttp3.internal.http2.hpackjson.Case;
+import mOkhttp3.internal.http2.hpackjson.HpackJsonUtil;
+import mOkhttp3.internal.http2.hpackjson.Story;
 import okio.Buffer;
 
 import static org.assertj.core.api.Assertions.assertThat;

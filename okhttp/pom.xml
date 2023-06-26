@@ -59,7 +59,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.0.1</version>
         <configuration>
-          <excludePackageNames>okhttp3.internal:okhttp3.internal.*</excludePackageNames>
+          <excludePackageNames>mOkhttp3.internal:mOkhttp3.internal.*</excludePackageNames>
           <links>
             <link>http://square.github.io/okio/</link>
           </links>
@@ -72,7 +72,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>okhttp3</Automatic-Module-Name>
+              <Automatic-Module-Name>mOkhttp3</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

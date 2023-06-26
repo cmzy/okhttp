@@ -69,7 +69,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>okhttp3.curl.Main</mainClass>
+              <mainClass>mOkhttp3.curl.Main</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -105,7 +105,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>okhttp3.curl</Automatic-Module-Name>
+              <Automatic-Module-Name>mOkhttp3.curl</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

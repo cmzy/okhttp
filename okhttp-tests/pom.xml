@@ -85,7 +85,7 @@
           </descriptorRefs>
           <archive>
             <manifest>
-              <mainClass>okhttp3.AutobahnTester</mainClass>
+              <mainClass>mOkhttp3.AutobahnTester</mainClass>
             </manifest>
           </archive>
         </configuration>

@@ -169,7 +169,7 @@
                 -->
               <property>
                 <name>listener</name>
-                <value>okhttp3.testing.InstallUncaughtExceptionHandlerListener</value>
+                <value>mOkhttp3.testing.InstallUncaughtExceptionHandlerListener</value>
               </property>
             </properties>
           </configuration>

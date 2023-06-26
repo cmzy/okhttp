@@ -53,7 +53,7 @@
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>3.0.1</version>
         <configuration>
-          <excludePackageNames>okhttp3.tls.internal:okhttp3.tls.internal.*</excludePackageNames>
+          <excludePackageNames>mOkhttp3.tls.internal:mOkhttp3.tls.internal.*</excludePackageNames>
           <links>
             <link>http://square.github.io/okhttp/javadoc/</link>
           </links>
@@ -66,7 +66,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>okhttp3.tls</Automatic-Module-Name>
+              <Automatic-Module-Name>mOkhttp3.tls</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

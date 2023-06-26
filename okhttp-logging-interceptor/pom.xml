@@ -63,7 +63,7 @@
         <configuration>
           <archive>
             <manifestEntries>
-              <Automatic-Module-Name>okhttp3.logging</Automatic-Module-Name>
+              <Automatic-Module-Name>mOkhttp3.logging</Automatic-Module-Name>
             </manifestEntries>
           </archive>
         </configuration>

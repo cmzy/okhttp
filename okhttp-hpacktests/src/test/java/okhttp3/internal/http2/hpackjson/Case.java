@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package okhttp3.internal.http2.hpackjson;
+package mOkhttp3.internal.http2.hpackjson;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import okhttp3.internal.http2.Header;
+import mOkhttp3.internal.http2.Header;
 import okio.ByteString;
 
 /**
